@@ -99,8 +99,8 @@ public class Tab1Fragment extends Fragment {
 
                 // TODO: Set field to CLUB_NAME so I can call that field.
                 TextView assigntxt = (TextView) item.findViewById(R.id.textTab1);
-                assigntxt.setText(jo.getString("CLUB_NAME"));
-                final String id = jo.getString("CLUB_NAME");
+                assigntxt.setText(jo.getString("CSI_name"));
+                final String id = jo.getString("CSI_name");
 
                 l.addView(item);
                 item.setOnClickListener(new View.OnClickListener() {
@@ -140,8 +140,8 @@ public class Tab1Fragment extends Fragment {
 
                 // TODO: Set field to CLUB_NAME so I can call that field.
                 TextView assigntxt = (TextView) item.findViewById(R.id.textTab1);
-                assigntxt.setText(jo.getString("EVENT_ID"));
-                final String id = jo.getString("EVENT_ID");
+                assigntxt.setText(jo.getString("EVENT_name"));
+                final String id = jo.getString("EVENT_name");
 
                 l.addView(item);
             }
