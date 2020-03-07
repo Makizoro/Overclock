@@ -1,1 +1,3 @@
-language: java
+language: android
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
