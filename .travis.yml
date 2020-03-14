@@ -14,7 +14,10 @@ env:
     - GRADLE_OPTS='-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false -Dkotlin.incremental=false -DdisablePreDex'
 
 before_install:
-  - cd "Linking You"
+  - #!/bin/sh
+  - cd $TRAVIS_BUILD_DIR/"Linking You"
+  - chmod +x gradlew
+  - sbt ++$TRAVIS_SCALA_VERSION package  
   - export ANDROID_HOME=~/android-sdk-linux
   - wget -q "https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" -O android-sdk-tools.zip
   - unzip -q android-sdk-tools.zip -d ${ANDROID_HOME}
