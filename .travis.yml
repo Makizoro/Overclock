@@ -17,4 +17,6 @@ android:
 
     - sys-img-x86-android-29
     - sys-img-armeabi-v7a-android-17
-before_install: cd LinkingYou
+before_install: 
+    - cd LinkingYou
+    - chmod +x gradlew
