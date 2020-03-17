@@ -16,8 +16,7 @@ env:
 before_install:
   - #!/bin/sh
   - cd LinkingYou
-  - chmod +x gradlew
-  - sbt ++$TRAVIS_SCALA_VERSION package  
+  - chmod +x gradlew 
   - export ANDROID_HOME=~/android-sdk-linux
   - wget -q "https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" -O android-sdk-tools.zip
   - unzip -q android-sdk-tools.zip -d ${ANDROID_HOME}
