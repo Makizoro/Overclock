@@ -15,7 +15,6 @@ env:
 
 before_install:
   - #!/bin/sh
-  - cd $TRAVIS_BUILD_DIR/"Linking You"
   - chmod +x gradlew
   - sbt ++$TRAVIS_SCALA_VERSION package  
   - export ANDROID_HOME=~/android-sdk-linux
