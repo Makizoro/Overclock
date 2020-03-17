@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">LinkingYou</string>
-    <string name="tab_text_1">Clubs</string>
-    <string name="tab_text_2">Social Groups</string>
-    <string name="tab_text_3">Interest Groups</string>
-    <string name="not_registered">Not Registered?</string>
-    <string name="register">Register!</string>
-</resources>
