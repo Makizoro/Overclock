@@ -20,3 +20,5 @@ android:
 before_install: 
     - cd LinkingYou
     - chmod +x gradlew
+script:
+  - ./gradlew assembleRelease --stacktrace
