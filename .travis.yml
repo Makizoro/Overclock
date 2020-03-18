@@ -11,7 +11,6 @@ env:
     - ANDROID_BUILD_TOOLS_VERSION=29.0.3
     - ADB_INSTALL_TIMEOUT=20
     - QEMU_AUDIO_DRV=none
-    - GRADLE_OPTS='-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false -Dkotlin.incremental=false -DdisablePreDex'
 
 before_install:
   - #!/bin/sh
