@@ -51,12 +51,12 @@ public class RegisterActivityTest {
 
     // To test the register button
 
-    @Test
+  /*  @Test
     public void regButton(){
         onView(withId(R.id.edUserReg)).perform(typeText("Jade"));
         onView(withId(R.id.Stud_id)).perform(typeText("123456"));
         onView(withId(R.id.edPassReg)).perform(typeText("hey"));
         onView(withId(R.id.edPassConReg)).perform(typeText("hey"));
         onView(withId(R.id.btnReg)).perform(click());
-    }
+    }*/
 }
