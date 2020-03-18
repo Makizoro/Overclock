@@ -2,11 +2,12 @@ language: android
 
 before_install:
   - cd LinkingYou
-  - chmod +x gradlew 
+  - chmod +x gradlew
+  - yes | sdkmanager --licenses
 
 android:
   components:
-    - build-tools-22.0.1
+    - build-tools-29.0.3
     - android-22
     - extra
     - addon
