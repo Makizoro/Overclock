@@ -36,11 +36,11 @@ before_install:
   - echo no | avdmanager create avd --force -n test -k "system-images;android-$EMULATOR_VERSION;$ABI"
 
 script:
-  - ./gradlew assembleDebugAndroidTest -PdisablePreDex --continue --stacktrace
-  - $ANDROID_HOME/emulator/emulator -avd test -no-window -gpuswiftshader &
+  - ./gradlew assembleAndroidTest 
+  - $ANDROID_HOME/emulator/emulator -avd test -no-window &
   - bash android-wait-for-emulator
   - adb shell input keyevent 82
-  - ./gradlew connectedDebugAndroidTest -PdisablePreDex --continue --stacktrace
+  - ./gradlew connectedAndroidTest 
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
