@@ -2,6 +2,7 @@ language: android
 
 before_install:
   - cd LinkingYou
+  - chmod +x gradlew 
 
 android:
   components:
