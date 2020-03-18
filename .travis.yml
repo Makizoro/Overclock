@@ -5,7 +5,7 @@ language: generic
 
 env:
   global:
-    - EMULATOR_VERSION=25
+    - EMULATOR_VERSION=18
     - TARGET_VERSION=29
     - ABI="google_apis;armeabi-v7a"
     - ANDROID_BUILD_TOOLS_VERSION=29.0.3
