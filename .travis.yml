@@ -3,9 +3,6 @@ dist: trusty
 os:
   - linux
   - osx
-before_install:
-  - cd LinkingYou
-
 env:
   - SYS=25 ABI="google_apis;arm64-v8a"
   - SYS=25 ABI="google_apis;armeabi-v7a"
@@ -41,6 +38,7 @@ matrix:
 
 language: generic
 before_install:
+  - cd LinkingYou
   # Install the Android SDK Dependency.
   - export ANDROID_HOME=~/android-sdk-linux
   - if [ $TRAVIS_OS_NAME == "osx" ]; then wget -q "https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip" -O android-sdk-tools.zip; else wget -q "https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" -O android-sdk-tools.zip; fi
