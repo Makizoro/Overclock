@@ -2,6 +2,7 @@ sudo: required
 dist: trusty
 os: linux
 language: generic
+codecov: true
 
 env:
   global:
