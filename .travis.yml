@@ -1,55 +1,55 @@
-sudo: required
+language: android
 dist: trusty
-os: linux
-language: generic
+
+notifications:
+  email: false
+
+jdk:
+  - oraclejdk8
 
 env:
   global:
-    - EMULATOR_VERSION=18
-    - TARGET_VERSION=29
-    - ABI="google_apis;armeabi-v7a"
+    - ANDROID_API_LEVEL=29
     - ANDROID_BUILD_TOOLS_VERSION=29.0.3
-    - ADB_INSTALL_TIMEOUT=20
-    - QEMU_AUDIO_DRV=none
-    - GRADLE_OPTS='-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false -Dkotlin.incremental=false -DdisablePreDex'
+    - EMU_NAME=test
+    - EMU_API_LEVEL=22
+    - EMU_ABI=armeabi-v7a
+#    - EMU_ABI=x86
+
+android:
+  components:
+      - tools
+      - platform-tools
+      - build-tools-$ANDROID_BUILD_TOOLS_VERSION
+      - android-$ANDROID_API_LEVEL
+      - android-$EMU_API_LEVEL
+      - extra-android-support
+      - sys-img-$EMU_ABI-google_apis-$EMU_API_LEVEL
+  licenses:
+      - 'android-sdk-license-.+'
 
 before_install:
-  #- !/bin/sh
   - cd LinkingYou
-  - chmod +x gradlew 
-  - export ANDROID_HOME=~/android-sdk-linux
-  - wget -q "https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" -O android-sdk-tools.zip
-  - unzip -q android-sdk-tools.zip -d ${ANDROID_HOME}
-  - rm android-sdk-tools.zip
-  - PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
-  - mkdir -p ~/.android
-  - touch ~/.android/repositories.cfg
-  - yes | sdkmanager --licenses
-  - sdkmanager "emulator" "tools" "platform-tools" > /dev/null
-  - sdkmanager --list | head -15
-  - sdkmanager "build-tools;$ANDROID_BUILD_TOOLS_VERSION" "platforms;android-$TARGET_VERSION" > /dev/null
-  - sdkmanager "platforms;android-$EMULATOR_VERSION" "system-images;android-$EMULATOR_VERSION;$ABI" > /dev/null
-  - sdkmanager --list | head -15
-  - mkdir "$ANDROID_HOME/licenses" || true
-  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
-  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
-  - echo no | avdmanager create avd --force -n test -k "system-images;android-$EMULATOR_VERSION;$ABI"
+  - chmod +x gradlew
+  #  https://github.com/travis-ci/travis-ci/issues/8874#issuecomment-350350607
+  - yes | sdkmanager "platforms;android-$ANDROID_API_LEVEL"
+  - yes | sdkmanager "platforms;android-$EMU_API_LEVEL"
+
+before_script:
+  - ./gradlew build jacocoTestReport assembleAndroidTest
+  - echo no | android create avd --force -n $EMU_NAME -t android-$EMU_API_LEVEL --abi google_apis/$EMU_ABI
+  # Do not remove '-no-window' from the next instruction because "Waiting for emulator to start" will return super fast
+  # and then, inside 'script:', we'll receive an error because apparently there's no device ready
+  - emulator -avd $EMU_NAME -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &
 
 script:
-  - ./gradlew assembleAndroidTest 
-  - $ANDROID_HOME/emulator/emulator -avd test -no-window &
-  #- bash android-wait-for-emulator
-  - adb shell input keyevent 82
-  #- ./gradlew connectedAndroidTest 
+  - ./gradlew connectedCheck --stacktrace
 
-before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - $HOME/.android/build-cache
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
+branches:
+  only:
+    - master
