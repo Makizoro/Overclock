@@ -36,7 +36,7 @@ before_install:
   #- echo no | avdmanager create avd --force -n test -k "system-images;android-$EMULATOR_VERSION;$ABI"
 
 before_script:
-  - echo no | android create avd --force -n test -t "system-images;android-$EMULATOR_VERSION;$ABI"
+  - echo no | android create avd --force -n test -k "system-images;android-$EMULATOR_VERSION;$ABI"
   - emulator -avd test -no-skin -no-audio -no-window &
   - curl http://is.gd/android_wait_for_emulator > android-wait-for-emulator
   - chmod u+x android-wait-for-emulator
