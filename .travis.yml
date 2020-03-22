@@ -14,7 +14,7 @@ env:
     - GRADLE_OPTS='-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false -Dkotlin.incremental=false -DdisablePreDex'
 
 before_install:
-  - !/bin/sh
+  #- !/bin/sh
   - cd LinkingYou
   - chmod +x gradlew 
   - export ANDROID_HOME=~/android-sdk-linux
@@ -39,8 +39,8 @@ script:
   - ./gradlew assembleAndroidTest 
   - $ANDROID_HOME/emulator/emulator -avd test -no-window &
   #- bash android-wait-for-emulator
-  - adb shell input keyevent 82
-  - ./gradlew connectedAndroidTest 
+  #- adb shell input keyevent 82
+  #- ./gradlew connectedAndroidTest 
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
