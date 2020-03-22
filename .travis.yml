@@ -38,7 +38,7 @@ before_install:
 
 script:
   - ./gradlew assembleAndroidTest 
-  - ./gradlew check 
+  - ./gradlew lint 
   - $ANDROID_HOME/emulator/emulator -avd test -no-window &
   #- bash android-wait-for-emulator
   #- adb shell input keyevent 82
