@@ -38,8 +38,8 @@ before_install:
 
 script:
   - ./gradlew assembleAndroidTest
-  - adb shell am instrument -w com.example.linkingyou
-  - $ANDROID_HOME/emulator/emulator -avd test -no-window &
+  - adb shell am instrument -w -r    -e package com.example.linkingyou -e debug false com.example.linkingyou.test/androidx.test.runner.AndroidJUnitRunner
+  #- $ANDROID_HOME/emulator/emulator -avd test -no-window &
   #- bash android-wait-for-emulator
   #- adb shell input keyevent 82
   #- ./gradlew connectedAndroidTest 
