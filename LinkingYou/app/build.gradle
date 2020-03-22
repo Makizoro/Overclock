@@ -25,6 +25,13 @@ android {
         timeOutInMs 20 * 60 * 1000  // 20 minutes
         installOptions "-d", "-t"
     }
+    android {
+        buildTypes {
+                debug {
+                    testCoverageEnabled true
+                      }
+                    }
+            }
 
 }
 
