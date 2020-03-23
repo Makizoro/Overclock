@@ -40,9 +40,9 @@ script:
   - ./gradlew assembleAndroidTest
   #- adb shell am instrument -w -r    -e package com.example.linkingyou -e debug false com.example.linkingyou.test/androidx.test.runner.AndroidJUnitRunner
   #- $ANDROID_HOME/emulator/emulator -avd test -no-window &
-  - bash android-wait-for-emulator
+  #- bash android-wait-for-emulator
   #- adb shell input keyevent 82
-  #- ./gradlew connectedAndroidTest 
+  - ./gradlew deviceCheck 
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
