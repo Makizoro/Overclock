@@ -1,6 +1,6 @@
-codecov: true
 sudo: required
 dist: trusty
+codecov: true
 os:
   - linux
   - osx
