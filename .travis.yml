@@ -1,56 +1,54 @@
+language: android
 sudo: required
-dist: trusty
-os: linux
-language: generic
-codecov: true
-
+jdk: oraclejdk8
+services:
+- docker
+before_cache:
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 env:
   global:
-    - EMULATOR_VERSION=24
-    - TARGET_VERSION=29
-    - ABI="google_apis;armeabi-v7a"
-    - ANDROID_BUILD_TOOLS_VERSION=29.0.3
-    - ADB_INSTALL_TIMEOUT=20
-    - QEMU_AUDIO_DRV=none
-    - GRADLE_OPTS='-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false -Dkotlin.incremental=false -DdisablePreDex'
+  - ANDROID_API=21
+  - EMULATOR_API=28
+  - ANDROID_BUILD_TOOLS=28.0.3
+  - ADB_INSTALL_TIMEOUT=5
+android:
+  components:
+  - tools
+  - platform-tools
+  - build-tools-$ANDROID_BUILD_TOOLS
+  - android-$ANDROID_API
+  - android-$EMULATOR_API_LEVEL
+  - extra-google-m2repository
+  - extra-android-m2repository
+  - addon-google_apis-google-19
+  - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
+  - sys-img-armeabi-v7a-addon-google_apis-google-$EMULATOR_API_LEVEL
+
+  licenses:
+  - android-sdk-preview-license-.+
+  - android-sdk-license-.+
+  - google-gdk-license-.+
 
 before_install:
-  #- !/bin/sh
-  - cd LinkingYou
-  - chmod +x gradlew 
-  - export ANDROID_HOME=~/android-sdk-linux
-  - wget -q "https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" -O android-sdk-tools.zip
-  - unzip -q android-sdk-tools.zip -d ${ANDROID_HOME}
-  - rm android-sdk-tools.zip
-  - PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
-  - mkdir -p ~/.android
-  - touch ~/.android/repositories.cfg
-  - yes | sdkmanager --licenses
-  - sdkmanager "emulator" "tools" "platform-tools" > /dev/null
-  - sdkmanager --list | head -15
-  - sdkmanager "build-tools;$ANDROID_BUILD_TOOLS_VERSION" "platforms;android-$TARGET_VERSION" > /dev/null
-  - sdkmanager "platforms;android-$EMULATOR_VERSION" "system-images;android-$EMULATOR_VERSION;$ABI" > /dev/null
-  - sdkmanager --list | head -15
+  - yes | sdkmanager "platforms;android-26"
   - mkdir "$ANDROID_HOME/licenses" || true
   - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
   - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
-  - echo no | avdmanager create avd --force -n test -k "system-images;android-$EMULATOR_VERSION;$ABI"
+  - chmod +x gradlew
+  - ./gradlew dependencies || true
+
+before_script:
+  - echo "y" | android update sdk -a --no-ui --filter sys-img-armeabi-v7a-android-21,sys-img-x86_64-android-21
+  - echo no | android create avd --force -n test -t android-21 --abi default/armeabi-v7a
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &
 
 script:
-  - ./gradlew assembleAndroidTest
-  - $ANDROID_HOME/emulator/emulator -avd test -no-window &
-  #- bash android-wait-for-emulator
-  - adb shell input keyevent 82
-  - ./gradlew connectedAndroidTest 
-
-before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - $HOME/.android/build-cache
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - ./gradlew clean build connectedCheck -PdisablePreDex --stacktrace
+  - ./gradlew build assembleDebug
