@@ -19,19 +19,16 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            testCoverageEnabled true
+        }
+        
     }
     
     adbOptions {
         timeOutInMs 20 * 60 * 1000  // 20 minutes
         installOptions "-d", "-t"
     }
-    android {
-        buildTypes {
-                debug {
-                    testCoverageEnabled true
-                      }
-                    }
-            }
 
 }
 
