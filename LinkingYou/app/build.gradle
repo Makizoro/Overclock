@@ -29,6 +29,9 @@ android {
         timeOutInMs 20 * 60 * 1000  // 20 minutes
         installOptions "-d", "-t"
     }
+    lintOptions {
+           abortOnError false
+    }
 
 }
 
