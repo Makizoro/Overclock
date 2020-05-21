@@ -2,31 +2,48 @@
 <?php
 require_once 'config.php';
 
-$db_link = mysqli_connect($db_hostname, $db_username, $db_password, $db_database);
+$db_link = mysqli_connect($db_hostname, $db_username, $db_password, $db_database); //connecting to$
 
-$password=$_POST["UserPassword"];
-$UserName=$_POST["UserName"];
-$studentId=$_POST["studentId"];
-$club=$_POST["club"];
+//COLLECTING DATA FROM THE FORM
 
-$hash = password_hash($password,PASSWORD_DEFAULT);
+$PERSON_username=$_POST["Username"];
+$PERSON_email=$_POST["Email"];
+$PERSON_password=$_POST["UserPassword"];
+$CSI_name=$_POST["CSI_name"];//IF THEY BELONG TO A CLUB
+$REGISTRATION_date = date("l jS \of F Y h:i:s A");
+$PERSON_type=$_POST["PERSON_type"]
+
+//hashing the password
+$PERSON_password_hash = password_hash($PERSON_password,PASSWORD_DEFAULT);
 
 if(!$db_link){
-	die("CONNECTION FAILED: ".mysqli_connect_error());
+        die("CONNECTION FAILED: ".mysqli_connect_error());
 }
-$mysql_qry="INSERT INTO register(username,student_number,password,club) VALUES('$UserName','$studentId','$hash','$club')";
 
-$mysql_qry1="INSERT INTO USERS(STUDENT_ID,PASSWORD) VALUES('$studentId','$hash')";
- 
+// FIRST CHECK IF THE USER DOESN'T ALREADY EXIST
+$mysql_checkUser="SELECT * FROM PERSON WHERE PERSON_username='$PERSON_username'";
+$checkResult = mysqli_query($db_link,$mysql_checkUser);
+if(mysqli_num_rows($checkResult) <= 0){ // if the user doesn't exist insert
 
-if(mysqli_query($db_link,$mysql_qry) && mysqli_query($db_link,$mysql_qry1))
-{
-   echo "register success";
+        // inserting the details to Person table
+        $mysql_insertion_into_personTable="INSERT INTO PERSON(
+                PERSON_username,PERSON_email,PERSON_password_hash,CSI_name,PERSON_type)
+                                        VALUES(
+                '$PERSON_username','$PERSON_email','$PERSON_password_hash','$CSI_name','$PERSON_type')";
+        
+    
+                if(mysqli_query(mysqli_query($db_link,$mysql_insertion_into_personTable))){
+                    echo "0";
+                }
+                else{
+                    echo "1" .$db_link->error;
+                }
 }
 else{
-	echo "register not success" .$db_link->error;
+    echo "1";
 }
-
+    
 $db_link->close();
-
+    
 ?>
+
