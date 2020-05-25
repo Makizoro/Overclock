@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.linkingyou.ExampleInstrumentedTest" tests="10" failures="0" errors="0" skipped="0" time="13264.0" timestamp="2020-05-25T04:29:20" hostname="localhost">
+  <properties>
+    <property name="device" value="HUAWEI CRR-UL00 - 5.1.1" />
+    <property name="flavor" value="" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="useAppContext" classname="com.example.linkingyou.ExampleInstrumentedTest" time="0.001" />
+  <testcase name="login" classname="com.example.linkingyou.MainActivityTest" time="2.14" />
+  <testcase name="usernameText" classname="com.example.linkingyou.MainActivityTest" time="1.159" />
+  <testcase name="regLink" classname="com.example.linkingyou.MainActivityTest" time="0.745" />
+  <testcase name="passText" classname="com.example.linkingyou.MainActivityTest" time="1.081" />
+  <testcase name="passConText" classname="com.example.linkingyou.RegisterActivityTest" time="1.134" />
+  <testcase name="studNoText" classname="com.example.linkingyou.RegisterActivityTest" time="1.133" />
+  <testcase name="usernameText" classname="com.example.linkingyou.RegisterActivityTest" time="0.645" />
+  <testcase name="passText" classname="com.example.linkingyou.RegisterActivityTest" time="1.107" />
+  <testcase name="backButton" classname="com.example.linkingyou.RegisterActivityTest" time="0.667" />
+</testsuite>
