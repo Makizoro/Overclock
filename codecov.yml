@@ -4,7 +4,7 @@ codecov:
 coverage:
   precision: 2
   round: down
-  range: "70...100"
+  range: "50...100"
 
 parsers:
   gcov:
@@ -18,6 +18,7 @@ comment:
   layout: "reach,diff,flags,tree"
   behavior: default
   require_changes: no
+
 fixes:
 #  - "before/::after/"  # move path   e.g., "before/path" => "after/path"
   - "::after/LinkingYou/"         # move root   e.g., "path/" => "after/path/"
