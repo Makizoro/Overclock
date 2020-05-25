@@ -20,5 +20,5 @@ comment:
   require_changes: no
 fixes:
 #  - "before/::after/"  # move path   e.g., "before/path" => "after/path"
-  - "::after/LinkingYou"         # move root   e.g., "path/" => "after/path/"
+  - "::after/LinkingYou/"         # move root   e.g., "path/" => "after/path/"
   #- "before/::"        # reduce root e.g., "before/path/" => "path/"
