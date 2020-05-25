@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MainActivity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=0;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">debugAndroidTest</a> &gt; <a href="index.source.html" class="el_package">com.example.linkingyou</a> &gt; <span class="el_source">MainActivity.java</span></div><h1>MainActivity.java</h1><pre class="source lang-java linenums">package com.example.linkingyou;
+
+import android.content.ContentValues;
+import android.content.Intent;
+import android.os.Bundle;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.tabs.TabLayout;
+
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.linkingyou.ui.main.SectionsPagerAdapter;
+
+<span class="fc" id="L24">public class MainActivity extends AppCompatActivity {</span>
+
+    EditText mUsername;
+    EditText mPassword;
+    Button mButtonLog;
+    TextView mRegister;
+    TextView mTextWrong;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+<span class="fc" id="L34">        super.onCreate(savedInstanceState);</span>
+<span class="fc" id="L35">        setContentView(R.layout.activity_main);</span>
+
+<span class="fc" id="L37">        mUsername = (EditText) findViewById(R.id.editText);</span>
+<span class="fc" id="L38">        mPassword = (EditText) findViewById(R.id.edPass);</span>
+<span class="fc" id="L39">        mButtonLog = (Button) findViewById(R.id.btnLog);</span>
+<span class="fc" id="L40">        mRegister = (TextView) findViewById(R.id.txtReg);</span>
+<span class="fc" id="L41">        mRegister.setOnClickListener(new View.OnClickListener() {</span>
+            @Override
+            public void onClick(View v) {
+                //TODO: remove when done
+<span class="fc" id="L45">                Intent registerIntent = new Intent(MainActivity.this,TabActivity.class);</span>
+<span class="fc" id="L46">                startActivity(registerIntent);</span>
+                //Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
+                //startActivity(registerIntent);
+<span class="fc" id="L49">            }</span>
+        });
+<span class="fc" id="L51">        mButtonLog.setOnClickListener(new View.OnClickListener() {</span>
+            @Override
+            public void onClick(View v) {
+                //TODO: remove when done
+
+<span class="fc" id="L56">                String UserName=mUsername.getText().toString().trim();</span>
+<span class="fc" id="L57">                String UserPassword=mPassword.getText().toString().trim();</span>
+<span class="fc" id="L58">                ContentValues params = new ContentValues();</span>
+<span class="fc" id="L59">                params.put(&quot;UserName&quot;,UserName);</span>
+<span class="fc" id="L60">                params.put(&quot;UserPassword&quot;,UserPassword);</span>
+<span class="fc" id="L61">                AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost(</span>
+<span class="fc" id="L62">                        &quot;http://192.168.43.132/TESTING/PHPFILES/auth.php&quot;,params) {</span>
+                    @Override
+                    protected void onPostExecute(String output) {
+<span class="fc" id="L65">                        processlogin(output);</span>
+<span class="fc" id="L66">                    }</span>
+                };
+<span class="fc" id="L68">                asyncHttpPost.execute();</span>
+<span class="fc" id="L69">            }</span>
+        });
+<span class="fc" id="L71">    }</span>
+
+    public void processlogin(String output) {
+<span class="fc" id="L74">        mPassword = (EditText) findViewById(R.id.edPass);</span>
+<span class="fc" id="L75">        String username=mPassword.getText().toString().trim();</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if(output.equals(&quot;0&quot;)){</span>
+<span class="nc" id="L77">            Intent TabsIntent = new Intent(MainActivity.this, TabActivity.class);</span>
+            //TabsIntent.putExtra(&quot;userS&quot;,username);
+<span class="nc" id="L79">            startActivity(TabsIntent);</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">        }else if(output.equals(&quot;1&quot;)){</span>
+<span class="nc" id="L81">            Toast.makeText(this,&quot;Incorrect Password or Username&quot;,Toast.LENGTH_SHORT).show();</span>
+        }
+<span class="fc" id="L83">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span>Generated by the Android Gradle plugin 3.6.3</div></body></html>

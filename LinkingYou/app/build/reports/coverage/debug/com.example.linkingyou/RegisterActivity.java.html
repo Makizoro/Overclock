@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegisterActivity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=0;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">debugAndroidTest</a> &gt; <a href="index.source.html" class="el_package">com.example.linkingyou</a> &gt; <span class="el_source">RegisterActivity.java</span></div><h1>RegisterActivity.java</h1><pre class="source lang-java linenums">package com.example.linkingyou;
+
+import android.content.ContentValues;
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+<span class="fc" id="L14">public class RegisterActivity extends AppCompatActivity {</span>
+    EditText mUsername;
+    EditText mStudent_ID;
+    EditText mPassword;
+    EditText mPassCon;
+    Button mBack;
+    Button mReg;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+<span class="fc" id="L24">        super.onCreate(savedInstanceState);</span>
+<span class="fc" id="L25">        setContentView(R.layout.activity_register);</span>
+
+<span class="fc" id="L27">        mUsername = (EditText) findViewById(R.id.edUserReg);</span>
+<span class="fc" id="L28">        mStudent_ID = (EditText) findViewById(R.id.Stud_id);</span>
+<span class="fc" id="L29">        mPassword = (EditText) findViewById(R.id.edPassReg);</span>
+<span class="fc" id="L30">        mPassCon = (EditText) findViewById(R.id.edPassConReg);</span>
+<span class="fc" id="L31">        mBack = (Button) findViewById(R.id.btnBack1);</span>
+<span class="fc" id="L32">        mReg = (Button) findViewById(R.id.btnReg);</span>
+        //final CheckBox mStud = (CheckBox) findViewById(R.id.chkstud);
+        //final CheckBox mLec = (CheckBox) findViewById(R.id.chklec);
+
+<span class="fc" id="L36">        mReg.setOnClickListener(new View.OnClickListener() {</span>
+            @Override
+            public void onClick(View v) {
+<span class="nc" id="L39">                String UserName = mUsername.getText().toString();</span>
+<span class="nc" id="L40">                String studentId = mStudent_ID.getText().toString();</span>
+<span class="nc" id="L41">                String UserPassword = mPassword.getText().toString();</span>
+<span class="nc" id="L42">                String conpass = mPassCon.getText().toString();</span>
+
+<span class="nc bnc" id="L44" title="All 2 branches missed.">                    if (conpass.equals(UserPassword)) {</span>
+<span class="nc" id="L45">                        ContentValues params = new ContentValues();</span>
+<span class="nc" id="L46">                        params.put(&quot;UserName&quot;, UserName);</span>
+<span class="nc" id="L47">                        params.put(&quot;studentId&quot;, studentId);</span>
+<span class="nc" id="L48">                        params.put(&quot;UserPassword&quot;, UserPassword);</span>
+<span class="nc" id="L49">                        AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost(&quot;http://192.168.43.132/TESTING/PHPFILES/register.php&quot;, params) {</span>
+                            @Override
+                            protected void onPostExecute(String output) {
+<span class="nc bnc" id="L52" title="All 2 branches missed.">                                if (output.equals(&quot;0&quot;)) {</span>
+<span class="nc" id="L53">                                    TextView mWrong = (TextView) findViewById(R.id.txtunmatched);</span>
+<span class="nc" id="L54">                                    mWrong.setText(&quot;Password already exits.&quot;);</span>
+                                }
+<span class="nc" id="L56">                            }</span>
+                        };
+<span class="nc" id="L58">                        asyncHttpPost.execute();</span>
+<span class="nc" id="L59">                    } else {</span>
+<span class="nc" id="L60">                        TextView mWrong = (TextView) findViewById(R.id.txtunmatched);</span>
+<span class="nc" id="L61">                        mWrong.setText(&quot;Passwords do not match.&quot;);</span>
+                    }
+
+<span class="nc" id="L64">            }</span>
+        });
+<span class="fc" id="L66">        mBack.setOnClickListener(new View.OnClickListener() {</span>
+            @Override
+            public void onClick(View v) {
+<span class="fc" id="L69">                Intent MainIntent = new Intent(RegisterActivity.this,MainActivity.class);</span>
+<span class="fc" id="L70">                startActivity(MainIntent);</span>
+<span class="fc" id="L71">            }</span>
+        });
+<span class="fc" id="L73">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span>Generated by the Android Gradle plugin 3.6.3</div></body></html>
