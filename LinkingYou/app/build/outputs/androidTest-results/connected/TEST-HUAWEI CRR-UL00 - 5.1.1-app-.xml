@@ -1,18 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="com.example.linkingyou.ExampleInstrumentedTest" tests="10" failures="0" errors="0" skipped="0" time="13264.0" timestamp="2020-05-25T04:29:20" hostname="localhost">
+<testsuite name="com.example.linkingyou.ExampleInstrumentedTest" tests="20" failures="0" errors="0" skipped="0" time="23661.0" timestamp="2020-05-25T11:23:30" hostname="localhost">
   <properties>
     <property name="device" value="HUAWEI CRR-UL00 - 5.1.1" />
     <property name="flavor" value="" />
     <property name="project" value="app" />
   </properties>
-  <testcase name="useAppContext" classname="com.example.linkingyou.ExampleInstrumentedTest" time="0.001" />
-  <testcase name="login" classname="com.example.linkingyou.MainActivityTest" time="2.14" />
-  <testcase name="usernameText" classname="com.example.linkingyou.MainActivityTest" time="1.159" />
-  <testcase name="regLink" classname="com.example.linkingyou.MainActivityTest" time="0.745" />
-  <testcase name="passText" classname="com.example.linkingyou.MainActivityTest" time="1.081" />
-  <testcase name="passConText" classname="com.example.linkingyou.RegisterActivityTest" time="1.134" />
-  <testcase name="studNoText" classname="com.example.linkingyou.RegisterActivityTest" time="1.133" />
-  <testcase name="usernameText" classname="com.example.linkingyou.RegisterActivityTest" time="0.645" />
-  <testcase name="passText" classname="com.example.linkingyou.RegisterActivityTest" time="1.107" />
-  <testcase name="backButton" classname="com.example.linkingyou.RegisterActivityTest" time="0.667" />
+  <testcase name="useAppContext" classname="com.example.linkingyou.ExampleInstrumentedTest" time="0.0" />
+  <testcase name="clubCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.927" />
+  <testcase name="societyCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.54" />
+  <testcase name="groupName" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.615" />
+  <testcase name="groupDescription" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.876" />
+  <testcase name="interestGroupCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.516" />
+  <testcase name="descriptionView" classname="com.example.linkingyou.GatheringDescriptionTest" time="2.467" />
+  <testcase name="groupDeatsButton" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.466" />
+  <testcase name="loginButton" classname="com.example.linkingyou.MainActivityTest" time="0.463" />
+  <testcase name="usernameText" classname="com.example.linkingyou.MainActivityTest" time="1.105" />
+  <testcase name="regLink" classname="com.example.linkingyou.MainActivityTest" time="0.592" />
+  <testcase name="passText" classname="com.example.linkingyou.MainActivityTest" time="0.799" />
+  <testcase name="processLogin" classname="com.example.linkingyou.MainActivityTest" time="2.408" />
+  <testcase name="passConText" classname="com.example.linkingyou.RegisterActivityTest" time="1.104" />
+  <testcase name="studNoText" classname="com.example.linkingyou.RegisterActivityTest" time="1.182" />
+  <testcase name="usernameText" classname="com.example.linkingyou.RegisterActivityTest" time="0.619" />
+  <testcase name="passText" classname="com.example.linkingyou.RegisterActivityTest" time="1.079" />
+  <testcase name="backButton" classname="com.example.linkingyou.RegisterActivityTest" time="0.516" />
+  <testcase name="addGroup" classname="com.example.linkingyou.TabActivityTest" time="0.721" />
+  <testcase name="createButton" classname="com.example.linkingyou.TabActivityTest" time="0.205" />
 </testsuite>

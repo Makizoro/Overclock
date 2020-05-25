@@ -2,6 +2,7 @@ package com.example.linkingyou.ui.main;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,7 +21,11 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.linkingyou.AsyncHTTPPost;
+import com.example.linkingyou.GatheringDescription;
+import com.example.linkingyou.MainActivity;
 import com.example.linkingyou.R;
+import com.example.linkingyou.TabActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -65,11 +70,13 @@ public class PlaceholderFragment extends Fragment {
                 textView.setText(s);
             }
         });*/
-        String Club_id = "";
+        final String Club_id = "";
         ContentValues params = new ContentValues();
         params.put("Club_id",Club_id);
+
+        //todo: takes empty string and returns Club names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://lamp.ms.wits.ac.za/~s1746074/giveclubs.php",params) {
+                "http://lamp.ms.wits.ac.za/~s1746074/clubs.php",params) {
             @Override
             protected void onPostExecute(String output) {
                     LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
@@ -96,10 +103,32 @@ public class PlaceholderFragment extends Fragment {
                                     String Club_ID = marked.getText().toString();
                                     ContentValues params = new ContentValues();
                                     params.put("Club_ID", Club_ID);
+
+                                    //TODO: Gets all Club descriptions.
                                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                            "http://lamp.ms.wits.ac.za/~s1746074/getevents.php", params) {
+                                            "http://lamp.ms.wits.ac.za/~s1746074/getdesc.php", params) {
                                         @Override
                                         protected void onPostExecute(String output) {
+                                            LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
+                                            l.removeAllViews();
+                                            Log.d("output", output);
+                                            try {
+                                                JSONArray ja = new JSONArray(output);
+                                                for (int i = 0; i < ja.length(); i++) {
+                                                    JSONObject jo = (JSONObject) ja.get(i);
+                                                    LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
+
+                                                    TextView assigntxt = (TextView) item.findViewById(R.id.textview1);
+                                                    assigntxt.setText(jo.getString("CLUB_NAME"));
+                                                    final String id = jo.getString("CLUB_NAME");
+
+                                                    TextView assigntxt2 = (TextView) item.findViewById(R.id.textview2);
+                                                    assigntxt2.setText(jo.getString("CLUB_Desc"));
+                                                    final String id2 = jo.getString("CLUB_Desc");
+                                                }
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
                                         }
                                     };
                                     AsyncHttpPost.execute();

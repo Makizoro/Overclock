@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GatheringDescription.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=0;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">debugAndroidTest</a> &gt; <a href="index.source.html" class="el_package">com.example.linkingyou</a> &gt; <span class="el_source">GatheringDescription.java</span></div><h1>GatheringDescription.java</h1><pre class="source lang-java linenums">package com.example.linkingyou;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.snackbar.Snackbar;
+
+<span class="fc" id="L19">public class GatheringDescription extends AppCompatActivity {</span>
+
+    EditText Name;
+    EditText Desc;
+    Button Create;
+    CheckBox Club;
+    CheckBox Social;
+    CheckBox Interest;
+
+    protected void onCreate(Bundle savedInstanceState) {
+<span class="fc" id="L29">        super.onCreate(savedInstanceState);</span>
+<span class="fc" id="L30">        setContentView(R.layout.gathering_desc);</span>
+
+<span class="fc" id="L32">        Name = (EditText) findViewById(R.id.editTxt);</span>
+<span class="fc" id="L33">        Desc = (EditText) findViewById(R.id.edDesc);</span>
+<span class="fc" id="L34">        Create = (Button) findViewById(R.id.btnConf);</span>
+<span class="fc" id="L35">        Club = (CheckBox) findViewById(R.id.chkClub);</span>
+<span class="fc" id="L36">        Social = (CheckBox) findViewById(R.id.chkSocial);</span>
+<span class="fc" id="L37">        Interest = (CheckBox) findViewById(R.id.chkInterest);</span>
+
+<span class="fc" id="L39">        Create.setOnClickListener(new View.OnClickListener() {</span>
+            @Override
+            public void onClick(final View v) {
+<span class="fc" id="L42">                String SName=Name.getText().toString().trim();</span>
+<span class="fc" id="L43">                String SDesc=Desc.getText().toString().trim();</span>
+
+<span class="fc bfc" id="L45" title="All 2 branches covered.">                if(Club.isChecked()){</span>
+<span class="fc" id="L46">                    ContentValues params = new ContentValues();</span>
+<span class="fc" id="L47">                    params.put(&quot;SName&quot;, SName);</span>
+<span class="fc" id="L48">                    params.put(&quot;SDesc&quot;, SDesc);</span>
+
+                    //todo: takes in name, desc, and creates a potential club, needs to be approved by admin.
+<span class="fc" id="L51">                    @SuppressLint(&quot;StaticFieldLeak&quot;) AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(</span>
+<span class="fc" id="L52">                            &quot;http://lamp.ms.wits.ac.za/~s1746074/createClub.php&quot;, params) {</span>
+                        @Override
+                        protected void onPostExecute(String output) {
+<span class="fc" id="L55">                            Snackbar.make(v, &quot;Sent to Administrator for Approval!&quot;, Snackbar.LENGTH_LONG)</span>
+<span class="fc" id="L56">                                    .setAction(&quot;Action&quot;, null).show();</span>
+<span class="fc" id="L57">                        }</span>
+                    };
+<span class="fc" id="L59">                    AsyncHttpPost.execute();</span>
+                }
+<span class="fc bfc" id="L61" title="All 2 branches covered.">                if(Social.isChecked()){</span>
+<span class="fc" id="L62">                    ContentValues params = new ContentValues();</span>
+<span class="fc" id="L63">                    params.put(&quot;SName&quot;, SName);</span>
+<span class="fc" id="L64">                    params.put(&quot;SDesc&quot;, SDesc);</span>
+
+                    //todo: takes in name, desc, and creates a potential SocialG, needs to be approved by admin.
+<span class="fc" id="L67">                    @SuppressLint(&quot;StaticFieldLeak&quot;) AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(</span>
+<span class="fc" id="L68">                            &quot;http://lamp.ms.wits.ac.za/~s1746074/createSocial.php&quot;, params) {</span>
+                        @Override
+                        protected void onPostExecute(String output) {
+<span class="fc" id="L71">                            Snackbar.make(v, &quot;Sent to Administrator for Approval!&quot;, Snackbar.LENGTH_LONG)</span>
+<span class="fc" id="L72">                                    .setAction(&quot;Action&quot;, null).show();</span>
+<span class="fc" id="L73">                        }</span>
+                    };
+<span class="fc" id="L75">                    AsyncHttpPost.execute();</span>
+                }
+<span class="fc bfc" id="L77" title="All 2 branches covered.">                if(Interest.isChecked()){</span>
+<span class="fc" id="L78">                    ContentValues params = new ContentValues();</span>
+<span class="fc" id="L79">                    params.put(&quot;SName&quot;, SName);</span>
+<span class="fc" id="L80">                    params.put(&quot;SDesc&quot;, SDesc);</span>
+
+                    //todo: takes in name, desc, and creates a potential InterestG, needs to be approved by admin.
+<span class="fc" id="L83">                    @SuppressLint(&quot;StaticFieldLeak&quot;) AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(</span>
+<span class="fc" id="L84">                            &quot;http://lamp.ms.wits.ac.za/~s1746074/createInterest.php&quot;, params) {</span>
+                        @Override
+                        protected void onPostExecute(String output) {
+<span class="fc" id="L87">                            Snackbar.make(v, &quot;Sent to Administrator for Approval!&quot;, Snackbar.LENGTH_LONG)</span>
+<span class="fc" id="L88">                                    .setAction(&quot;Action&quot;, null).show();</span>
+<span class="fc" id="L89">                        }</span>
+                    };
+<span class="fc" id="L91">                    AsyncHttpPost.execute();</span>
+                }
+<span class="fc" id="L93">            }</span>
+        });
+        //LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
+        //final TextView marked = (TextView)item.findViewById(R.id.textview1);
+        //String Club_ID = marked.getText().toString();
+        /*ContentValues params = new ContentValues();
+        params.put(&quot;Club_ID&quot;, Club_ID);
+        @SuppressLint(&quot;StaticFieldLeak&quot;) AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
+                &quot;http://lamp.ms.wits.ac.za/~s1746074/getevents.php&quot;, params) {
+            @Override
+            protected void onPostExecute(String output) {
+            }
+        };
+        AsyncHttpPost.execute();*/
+<span class="fc" id="L107">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span>Generated by the Android Gradle plugin 3.6.3</div></body></html>

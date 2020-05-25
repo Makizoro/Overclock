@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TabActivity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=0;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">debugAndroidTest</a> &gt; <a href="index.source.html" class="el_package">com.example.linkingyou</a> &gt; <span class="el_source">TabActivity.java</span></div><h1>TabActivity.java</h1><pre class="source lang-java linenums">package com.example.linkingyou;
 
+import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,33 +14,53 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.linkingyou.ui.main.SectionsPagerAdapter;
 
-<span class="fc" id="L18">public class TabActivity extends AppCompatActivity {</span>
+<span class="fc" id="L21">public class TabActivity extends AppCompatActivity {</span>
+
+    Button ButtonCreate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-<span class="fc" id="L22">        super.onCreate(savedInstanceState);</span>
-<span class="fc" id="L23">        setContentView(R.layout.activity_tab);</span>
-<span class="fc" id="L24">        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());</span>
-<span class="fc" id="L25">        ViewPager viewPager = findViewById(R.id.view_pager);</span>
-<span class="fc" id="L26">        viewPager.setAdapter(sectionsPagerAdapter);</span>
-<span class="fc" id="L27">        TabLayout tabs = findViewById(R.id.tabs);</span>
-<span class="fc" id="L28">        TabLayout.Tab firstTab = tabs.newTab(); // Create a new Tab names</span>
-<span class="fc" id="L29">        firstTab.setText(&quot;First Tab&quot;); // set the Text for the first Tab</span>
-        //firstTab.setIcon(R.drawable.ic_launcher); // set an icon for the first tab
-<span class="fc" id="L31">        tabs.addTab(firstTab);</span>
-<span class="fc" id="L32">        tabs.setupWithViewPager(viewPager);</span>
-<span class="fc" id="L33">        FloatingActionButton fab = findViewById(R.id.fab);</span>
+<span class="fc" id="L27">        super.onCreate(savedInstanceState);</span>
+<span class="fc" id="L28">        setContentView(R.layout.activity_tab);</span>
 
-<span class="fc" id="L35">        fab.setOnClickListener(new View.OnClickListener() {</span>
+<span class="fc" id="L30">        ButtonCreate = (Button) findViewById(R.id.ButtonCreate);</span>
+<span class="fc" id="L31">        ButtonCreate.setVisibility(View.INVISIBLE);</span>
+
+<span class="fc" id="L33">        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());</span>
+<span class="fc" id="L34">        ViewPager viewPager = findViewById(R.id.view_pager);</span>
+<span class="fc" id="L35">        viewPager.setAdapter(sectionsPagerAdapter);</span>
+<span class="fc" id="L36">        TabLayout tabs = findViewById(R.id.tabs);</span>
+<span class="fc" id="L37">        TabLayout.Tab firstTab = tabs.newTab(); // Create a new Tab names</span>
+<span class="fc" id="L38">        firstTab.setText(&quot;First Tab&quot;); // set the Text for the first Tab</span>
+        //firstTab.setIcon(R.drawable.ic_launcher); // set an icon for the first tab
+<span class="fc" id="L40">        tabs.addTab(firstTab);</span>
+<span class="fc" id="L41">        tabs.setupWithViewPager(viewPager);</span>
+<span class="fc" id="L42">        final FloatingActionButton fab = findViewById(R.id.fab);</span>
+
+<span class="fc" id="L44">        fab.setOnClickListener(new View.OnClickListener() {</span>
             @Override
             public void onClick(View view) {
-<span class="nc" id="L38">                Snackbar.make(view, &quot;Replace with your own action&quot;, Snackbar.LENGTH_LONG)</span>
-<span class="nc" id="L39">                        .setAction(&quot;Action&quot;, null).show();</span>
-<span class="nc" id="L40">            }</span>
+<span class="fc" id="L47">                ButtonCreate.setVisibility(View.VISIBLE);</span>
+<span class="fc" id="L48">                ButtonCreate.setOnClickListener(new View.OnClickListener() {</span>
+                    @Override
+                    public void onClick(View v) {
+<span class="nc" id="L51">                        Intent TabsIntent = new Intent(TabActivity.this, GatheringDescription.class);</span>
+                        //TabsIntent.putExtra(&quot;userS&quot;,username);
+<span class="nc" id="L53">                        startActivity(TabsIntent);</span>
+<span class="nc" id="L54">                    }</span>
+                });
+<span class="fc" id="L56">                fab.setOnClickListener(new View.OnClickListener() {</span>
+                    @Override
+                    public void onClick(View view) {
+<span class="nc" id="L59">                        ButtonCreate.setVisibility(View.INVISIBLE);</span>
+<span class="nc" id="L60">                    }</span>
+                });
+<span class="fc" id="L62">            }</span>
         });
-<span class="fc" id="L42">    }</span>
+<span class="fc" id="L64">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span>Generated by the Android Gradle plugin 3.6.3</div></body></html>

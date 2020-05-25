@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: remove when done
-                Intent registerIntent = new Intent(MainActivity.this,TabActivity.class);
+                Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
                 startActivity(registerIntent);
                 //Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
                 //startActivity(registerIntent);
@@ -51,13 +50,14 @@ public class MainActivity extends AppCompatActivity {
         mButtonLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: remove when done
 
                 String UserName=mUsername.getText().toString().trim();
                 String UserPassword=mPassword.getText().toString().trim();
                 ContentValues params = new ContentValues();
                 params.put("UserName",UserName);
                 params.put("UserPassword",UserPassword);
+
+                //ToDo: processes login with username and password. Returns 0,1,or 2.
                 AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost(
                         "http://192.168.43.132/TESTING/PHPFILES/auth.php",params) {
                     @Override
@@ -78,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
             //TabsIntent.putExtra("userS",username);
             startActivity(TabsIntent);
         }else if(output.equals("1")){
+            Intent AdminIntent = new Intent(MainActivity.this, AdminActivity.class);
+            //TabsIntent.putExtra("userS",username);
+            startActivity(AdminIntent);
+        }else if(output.equals("2")){
             Toast.makeText(this,"Incorrect Password or Username",Toast.LENGTH_SHORT).show();
         }
     }

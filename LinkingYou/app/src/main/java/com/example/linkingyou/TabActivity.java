@@ -1,5 +1,7 @@
 package com.example.linkingyou;
 
+import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,15 +14,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.linkingyou.ui.main.SectionsPagerAdapter;
 
 public class TabActivity extends AppCompatActivity {
 
+    Button ButtonCreate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
+
+        ButtonCreate = (Button) findViewById(R.id.ButtonCreate);
+        ButtonCreate.setVisibility(View.INVISIBLE);
+
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
@@ -30,13 +39,26 @@ public class TabActivity extends AppCompatActivity {
         //firstTab.setIcon(R.drawable.ic_launcher); // set an icon for the first tab
         tabs.addTab(firstTab);
         tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = findViewById(R.id.fab);
+        final FloatingActionButton fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                ButtonCreate.setVisibility(View.VISIBLE);
+                ButtonCreate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent TabsIntent = new Intent(TabActivity.this, GatheringDescription.class);
+                        //TabsIntent.putExtra("userS",username);
+                        startActivity(TabsIntent);
+                    }
+                });
+                fab.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        ButtonCreate.setVisibility(View.INVISIBLE);
+                    }
+                });
             }
         });
     }

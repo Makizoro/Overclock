@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 public class MainActivityTest {
     @Rule
     public
-    ActivityTestRule<MainActivity> registerActivityActivityTestRule = new ActivityTestRule<MainActivity>(MainActivity.class);
+    ActivityTestRule<MainActivity> mainActivityActivityTestRule = new ActivityTestRule<MainActivity>(MainActivity.class);
 
     // To test the person number editText
     @Test
@@ -40,16 +40,15 @@ public class MainActivityTest {
 
     // To test the login
     @Test
-    public void login(){
+    public void processLogin(){
         onView(withId(R.id.editText)).perform(typeText("123456"));
         onView(withId(R.id.edPass)).perform(typeText("hey"));
         onView(withId(R.id.btnLog)).perform(click());
 
     }
 
-    /* To test the function process login
     @Test
-    public void processLogTest(){
-        processlogin("1");
-    }*/
+    public void loginButton(){
+        onView(withId(R.id.btnLog)).perform(click());
+    }
 }

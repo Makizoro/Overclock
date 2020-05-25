@@ -16,4 +16,13 @@
         android:padding="@dimen/appbar_padding"
         android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
 
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="?actionBarSize"
+        android:padding="@dimen/appbar_padding"
+        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

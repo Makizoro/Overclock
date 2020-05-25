@@ -46,12 +46,17 @@ public class RegisterActivity extends AppCompatActivity {
                         params.put("UserName", UserName);
                         params.put("studentId", studentId);
                         params.put("UserPassword", UserPassword);
+
+                        //todo: takes username, student id and password, registers them. returns 0 or 1 (a 0 if such a student id already exists)
                         AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost("http://192.168.43.132/TESTING/PHPFILES/register.php", params) {
                             @Override
                             protected void onPostExecute(String output) {
                                 if (output.equals("0")) {
                                     TextView mWrong = (TextView) findViewById(R.id.txtunmatched);
-                                    mWrong.setText("Password already exits.");
+                                    mWrong.setText("You already have an account...");
+                                }else{
+                                    TextView mWrong = (TextView) findViewById(R.id.txtunmatched);
+                                    mWrong.setText("Registered Succesfully!");
                                 }
                             }
                         };

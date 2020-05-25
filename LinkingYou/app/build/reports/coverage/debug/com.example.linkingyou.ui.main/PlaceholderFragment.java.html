@@ -2,6 +2,7 @@
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,7 +21,11 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.linkingyou.AsyncHTTPPost;
+import com.example.linkingyou.GatheringDescription;
+import com.example.linkingyou.MainActivity;
 import com.example.linkingyou.R;
+import com.example.linkingyou.TabActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -28,93 +33,117 @@ import org.json.JSONObject;
 /**
  * A placeholder fragment containing a simple view.
  */
-<span class="fc" id="L31">public class PlaceholderFragment extends Fragment {</span>
+<span class="fc" id="L36">public class PlaceholderFragment extends Fragment {</span>
 
     private static final String ARG_SECTION_NUMBER = &quot;section_number&quot;;
 
     private PageViewModel pageViewModel;
 
     public static PlaceholderFragment newInstance(int index) {
-<span class="fc" id="L38">        PlaceholderFragment fragment = new PlaceholderFragment();</span>
-<span class="fc" id="L39">        Bundle bundle = new Bundle();</span>
-<span class="fc" id="L40">        bundle.putInt(ARG_SECTION_NUMBER, index);</span>
-<span class="fc" id="L41">        fragment.setArguments(bundle);</span>
-<span class="fc" id="L42">        return fragment;</span>
+<span class="nc" id="L43">        PlaceholderFragment fragment = new PlaceholderFragment();</span>
+<span class="nc" id="L44">        Bundle bundle = new Bundle();</span>
+<span class="nc" id="L45">        bundle.putInt(ARG_SECTION_NUMBER, index);</span>
+<span class="nc" id="L46">        fragment.setArguments(bundle);</span>
+<span class="nc" id="L47">        return fragment;</span>
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-<span class="fc" id="L47">        super.onCreate(savedInstanceState);</span>
-<span class="fc" id="L48">        pageViewModel = ViewModelProviders.of(this).get(PageViewModel.class);</span>
-<span class="fc" id="L49">        int index = 1;</span>
-<span class="pc bpc" id="L50" title="1 of 2 branches missed.">        if (getArguments() != null) {</span>
-<span class="fc" id="L51">            index = getArguments().getInt(ARG_SECTION_NUMBER);</span>
+<span class="nc" id="L52">        super.onCreate(savedInstanceState);</span>
+<span class="nc" id="L53">        pageViewModel = ViewModelProviders.of(this).get(PageViewModel.class);</span>
+<span class="nc" id="L54">        int index = 1;</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">        if (getArguments() != null) {</span>
+<span class="nc" id="L56">            index = getArguments().getInt(ARG_SECTION_NUMBER);</span>
         }
-<span class="fc" id="L53">        pageViewModel.setIndex(index);</span>
-<span class="fc" id="L54">    }</span>
+<span class="nc" id="L58">        pageViewModel.setIndex(index);</span>
+<span class="nc" id="L59">    }</span>
 
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-<span class="fc" id="L60">        final View root = inflater.inflate(R.layout.fragment_main, container, false);</span>
-<span class="fc" id="L61">        final TextView textView = root.findViewById(R.id.section_label);</span>
+<span class="nc" id="L65">        final View root = inflater.inflate(R.layout.fragment_main, container, false);</span>
+<span class="nc" id="L66">        final TextView textView = root.findViewById(R.id.section_label);</span>
         /*pageViewModel.getText().observe(this, new Observer&lt;String&gt;() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });*/
-<span class="fc" id="L68">        String Club_id = &quot;&quot;;</span>
-<span class="fc" id="L69">        ContentValues params = new ContentValues();</span>
-<span class="fc" id="L70">        params.put(&quot;Club_id&quot;,Club_id);</span>
-<span class="fc" id="L71">        @SuppressLint(&quot;StaticFieldLeak&quot;) AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(</span>
-<span class="fc" id="L72">                &quot;http://lamp.ms.wits.ac.za/~s1746074/giveclubs.php&quot;,params) {</span>
+<span class="nc" id="L73">        final String Club_id = &quot;&quot;;</span>
+<span class="nc" id="L74">        ContentValues params = new ContentValues();</span>
+<span class="nc" id="L75">        params.put(&quot;Club_id&quot;,Club_id);</span>
+
+        //todo: takes empty string and returns Club names.
+<span class="nc" id="L78">        @SuppressLint(&quot;StaticFieldLeak&quot;) AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(</span>
+<span class="nc" id="L79">                &quot;http://lamp.ms.wits.ac.za/~s1746074/clubs.php&quot;,params) {</span>
             @Override
             protected void onPostExecute(String output) {
-<span class="fc" id="L75">                    LinearLayout l = (LinearLayout) root.findViewById(R.id.list);</span>
-<span class="fc" id="L76">                    l.removeAllViews();</span>
-<span class="fc" id="L77">                    Log.d(&quot;output&quot;, output);</span>
+<span class="nc" id="L82">                    LinearLayout l = (LinearLayout) root.findViewById(R.id.list);</span>
+<span class="nc" id="L83">                    l.removeAllViews();</span>
+<span class="nc" id="L84">                    Log.d(&quot;output&quot;, output);</span>
                     try {
-<span class="nc" id="L79">                        JSONArray ja = new JSONArray(output);</span>
-<span class="nc bnc" id="L80" title="All 2 branches missed.">                        for (int i = 0; i &lt; ja.length(); i++) {</span>
-<span class="nc" id="L81">                            JSONObject jo = (JSONObject) ja.get(i);</span>
-<span class="nc" id="L82">                            LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);</span>
+<span class="nc" id="L86">                        JSONArray ja = new JSONArray(output);</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">                        for (int i = 0; i &lt; ja.length(); i++) {</span>
+<span class="nc" id="L88">                            JSONObject jo = (JSONObject) ja.get(i);</span>
+<span class="nc" id="L89">                            LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);</span>
 
 
                             // TODO: Set field to CLUB_NAME so I can call that field.
-<span class="nc" id="L86">                            TextView assigntxt = (TextView) item.findViewById(R.id.textview1);</span>
-<span class="nc" id="L87">                            assigntxt.setText(jo.getString(&quot;CLUB_NAME&quot;));</span>
-<span class="nc" id="L88">                            final String id = jo.getString(&quot;CLUB_NAME&quot;);</span>
+<span class="nc" id="L93">                            TextView assigntxt = (TextView) item.findViewById(R.id.textview1);</span>
+<span class="nc" id="L94">                            assigntxt.setText(jo.getString(&quot;CLUB_NAME&quot;));</span>
+<span class="nc" id="L95">                            final String id = jo.getString(&quot;CLUB_NAME&quot;);</span>
 
-<span class="nc" id="L90">                            l.addView(item);</span>
-<span class="nc" id="L91">                            item.setOnClickListener(new View.OnClickListener() {</span>
+<span class="nc" id="L97">                            l.addView(item);</span>
+<span class="nc" id="L98">                            item.setOnClickListener(new View.OnClickListener() {</span>
                                 @Override
                                 public void onClick(View v) {
-<span class="nc" id="L94">                                    LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);</span>
-<span class="nc" id="L95">                                    final TextView marked = (TextView)item.findViewById(R.id.textview1);</span>
-<span class="nc" id="L96">                                    String Club_ID = marked.getText().toString();</span>
-<span class="nc" id="L97">                                    ContentValues params = new ContentValues();</span>
-<span class="nc" id="L98">                                    params.put(&quot;Club_ID&quot;, Club_ID);</span>
-<span class="nc" id="L99">                                    @SuppressLint(&quot;StaticFieldLeak&quot;) AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(</span>
-<span class="nc" id="L100">                                            &quot;http://lamp.ms.wits.ac.za/~s1746074/getevents.php&quot;, params) {</span>
+<span class="nc" id="L101">                                    LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);</span>
+<span class="nc" id="L102">                                    final TextView marked = (TextView)item.findViewById(R.id.textview1);</span>
+<span class="nc" id="L103">                                    String Club_ID = marked.getText().toString();</span>
+<span class="nc" id="L104">                                    ContentValues params = new ContentValues();</span>
+<span class="nc" id="L105">                                    params.put(&quot;Club_ID&quot;, Club_ID);</span>
+
+                                    //TODO: Gets all Club descriptions.
+<span class="nc" id="L108">                                    @SuppressLint(&quot;StaticFieldLeak&quot;) AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(</span>
+<span class="nc" id="L109">                                            &quot;http://lamp.ms.wits.ac.za/~s1746074/getdesc.php&quot;, params) {</span>
                                         @Override
                                         protected void onPostExecute(String output) {
-<span class="nc" id="L103">                                        }</span>
+<span class="nc" id="L112">                                            LinearLayout l = (LinearLayout) root.findViewById(R.id.list);</span>
+<span class="nc" id="L113">                                            l.removeAllViews();</span>
+<span class="nc" id="L114">                                            Log.d(&quot;output&quot;, output);</span>
+                                            try {
+<span class="nc" id="L116">                                                JSONArray ja = new JSONArray(output);</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">                                                for (int i = 0; i &lt; ja.length(); i++) {</span>
+<span class="nc" id="L118">                                                    JSONObject jo = (JSONObject) ja.get(i);</span>
+<span class="nc" id="L119">                                                    LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);</span>
+
+<span class="nc" id="L121">                                                    TextView assigntxt = (TextView) item.findViewById(R.id.textview1);</span>
+<span class="nc" id="L122">                                                    assigntxt.setText(jo.getString(&quot;CLUB_NAME&quot;));</span>
+<span class="nc" id="L123">                                                    final String id = jo.getString(&quot;CLUB_NAME&quot;);</span>
+
+<span class="nc" id="L125">                                                    TextView assigntxt2 = (TextView) item.findViewById(R.id.textview2);</span>
+<span class="nc" id="L126">                                                    assigntxt2.setText(jo.getString(&quot;CLUB_Desc&quot;));</span>
+<span class="nc" id="L127">                                                    final String id2 = jo.getString(&quot;CLUB_Desc&quot;);</span>
+                                                }
+<span class="nc" id="L129">                                            } catch (Exception e) {</span>
+<span class="nc" id="L130">                                                e.printStackTrace();</span>
+<span class="nc" id="L131">                                            }</span>
+<span class="nc" id="L132">                                        }</span>
                                     };
-<span class="nc" id="L105">                                    AsyncHttpPost.execute();</span>
-<span class="nc" id="L106">                                }</span>
+<span class="nc" id="L134">                                    AsyncHttpPost.execute();</span>
+<span class="nc" id="L135">                                }</span>
                             });
                         }
-<span class="fc" id="L109">                    } catch (Exception e) {</span>
-<span class="fc" id="L110">                        e.printStackTrace();</span>
-<span class="nc" id="L111">                    }</span>
-<span class="fc" id="L112">            }</span>
+<span class="nc" id="L138">                    } catch (Exception e) {</span>
+<span class="nc" id="L139">                        e.printStackTrace();</span>
+<span class="nc" id="L140">                    }</span>
+<span class="nc" id="L141">            }</span>
         };
-<span class="fc" id="L114">        asYncHttpPost.execute();</span>
+<span class="nc" id="L143">        asYncHttpPost.execute();</span>
 
 
-<span class="fc" id="L117">        return root;</span>
+<span class="nc" id="L146">        return root;</span>
     }
 
 
