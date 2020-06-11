@@ -50,7 +50,7 @@ public class AdminActivity extends AppCompatActivity {
 
         //todo: gets all new groups with their description as one object.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://lamp.ms.wits.ac.za/~s1746074/getNewGroups.php",params) {
+                "http://0.100.15.21/project/getNewGroups.php",params) {
             @Override
             protected void onPostExecute(String output) {
                 LinearLayout l = (LinearLayout) findViewById(R.id.list);

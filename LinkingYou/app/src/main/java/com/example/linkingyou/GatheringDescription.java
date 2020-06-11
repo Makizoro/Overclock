@@ -49,7 +49,7 @@ public class GatheringDescription extends AppCompatActivity {
 
                     //todo: takes in name, desc, and creates a potential club, needs to be approved by admin.
                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                            "http://lamp.ms.wits.ac.za/~s1746074/createClub.php", params) {
+                            "http://10.100.15.21/project/createClub.php", params) {
                         @Override
                         protected void onPostExecute(String output) {
                             Snackbar.make(v, "Sent to Administrator for Approval!", Snackbar.LENGTH_LONG)

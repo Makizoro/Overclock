@@ -1,1 +1,24 @@
-[{"outputType":{"type":"PROCESSED_RES"},"apkData":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"1.0","enabled":true,"outputFile":"app-debug-androidTest.apk","fullName":"debugAndroidTest","baseName":"debug-androidTest","dirName":""},"path":"resources-debugAndroidTest.ap_","properties":{}}]
+{
+  "version": 1,
+  "applicationId": "com.example.linkingyou.test",
+  "variantType": "ANDROID_TEST",
+  "elements": [
+    {
+      "outputType": {
+        "type": "PROCESSED_RES"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 1,
+        "versionName": "1.0",
+        "outputFile": "app-debug-androidTest.apk",
+        "fullName": "debugAndroidTest",
+        "baseName": "debug-androidTest",
+        "dirName": ""
+      },
+      "path": "resources-debugAndroidTest.ap_",
+      "properties": {}
+    }
+  ]
+}

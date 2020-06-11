@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //ToDo: processes login with username and password. Returns 0,1,or 2.
                 AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost(
-                        "http://192.168.43.132/TESTING/PHPFILES/auth.php",params) {
+                        "http://10.100.15.21/project/auth.php",params) {
                     @Override
                     protected void onPostExecute(String output) {
                         processlogin(output);
