@@ -1,5 +1,6 @@
 package com.example.linkingyou;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
@@ -43,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
                 startActivity(registerIntent);
-                //Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
-                //startActivity(registerIntent);
             }
         });
         mButtonLog.setOnClickListener(new View.OnClickListener() {
@@ -54,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
                 String UserName=mUsername.getText().toString().trim();
                 String UserPassword=mPassword.getText().toString().trim();
                 ContentValues params = new ContentValues();
-                params.put("UserName",UserName);
-                params.put("UserPassword",UserPassword);
+                params.put("username",UserName);
+                params.put("password",UserPassword);
 
                 //ToDo: processes login with username and password. Returns 0,1,or 2.
-                AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost(
+                @SuppressLint("StaticFieldLeak")AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost(
                         "http://10.100.15.21/project/auth.php",params) {
                     @Override
                     protected void onPostExecute(String output) {

@@ -1,5 +1,6 @@
 package com.example.linkingyou;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
@@ -43,12 +44,12 @@ public class RegisterActivity extends AppCompatActivity {
 
                     if (conpass.equals(UserPassword)) {
                         ContentValues params = new ContentValues();
-                        params.put("UserName", UserName);
-                        params.put("studentId", studentId);
-                        params.put("UserPassword", UserPassword);
+                        params.put("username", UserName);
+                        params.put("email", studentId);
+                        params.put("password", UserPassword);
 
                         //todo: takes username, student id and password, registers them. returns 0 or 1 (a 0 if such a student id already exists)
-                        AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost("http://10.100.15.21/project/register.php", params) {
+                        @SuppressLint("StaticFieldLeak")AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost("http://10.100.15.21/project/register.php", params) {
                             @Override
                             protected void onPostExecute(String output) {
                                 if (output.equals("0")) {
@@ -56,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     mWrong.setText("You already have an account...");
                                 }else{
                                     TextView mWrong = (TextView) findViewById(R.id.txtunmatched);
-                                    mWrong.setText("Registered Successfully!");
+                                    mWrong.setText("Registered Succesfully!");
                                 }
                             }
                         };
