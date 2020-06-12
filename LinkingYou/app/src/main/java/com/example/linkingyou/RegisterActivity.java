@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
                             protected void onPostExecute(String output) {
                                 if (output.equals("0")) {
                                     TextView mWrong = (TextView) findViewById(R.id.txtunmatched);
-                                    mWrong.setText("You already have an account...");
+                                    mWrong.setText("Username unavailable.");
                                 }else{
                                     TextView mWrong = (TextView) findViewById(R.id.txtunmatched);
                                     mWrong.setText("Registered Succesfully!");
