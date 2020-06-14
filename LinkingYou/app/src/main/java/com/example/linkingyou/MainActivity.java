@@ -77,28 +77,6 @@ public class MainActivity extends AppCompatActivity {
                                userLogIn(view);
             }
         });
-        /*mButtonLog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String userName=mUsername.getText().toString().trim();
-                String userPassword=mPassword.getText().toString().trim();
-                //ContentValues params = new ContentValues();
-                //params.put("username",userName);
-                //params.put("password",userPassword);
-
-
-                //ToDo: processes login with username and password. Returns 0,1,or 2.
-                @SuppressLint("StaticFieldLeak")AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost(
-                        "http://192.168.42.43/project/auth1.php",params) {
-                    @Override
-                    protected void onPostExecute(String output) {
-                        processlogin(output);
-                    }
-                };
-                asyncHttpPost.execute();
-            }
-        });*/
     }
 
     public void userReg(View v){
@@ -112,29 +90,9 @@ public class MainActivity extends AppCompatActivity {
 
         String method = "Login";
         BackgroundTask backgroundTask = new BackgroundTask(this);
-
         backgroundTask.execute(method,B_username,B_password);
-
-        //Task <backgroundTask.Status> backgroundTask.do
-        //String resIn = backgroundTask.mesages("Login Succesful");
-
-        /*if(resIn.equals("Login Succesful"))
-        {
-            Intent loginIntent = new Intent(MainActivity.this,TabActivity.class);
-            startActivity(loginIntent);
-        }*/
-
-        /*mButtonLog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent logIntent = new Intent(MainActivity.this,TabActivity.class);
-                startActivity(logIntent);
-            }
-
-        });*/
-        //BackIntent.Connect connection = new BackIntent.Connect();
-        //connection.execute(method,B_username,B_password);
     }
+
     class BackgroundTask extends AsyncTask<String,Void,String> {
 
         AlertDialog alertDialog;
@@ -195,9 +153,6 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
 
-    /*private void startActivity(Intent tab) {
-    }*/
-
         @Override
         protected void onProgressUpdate(Void... values) {
             super.onProgressUpdate(values);
@@ -212,45 +167,14 @@ public class MainActivity extends AppCompatActivity {
                 //TabsIntent.putExtra("userS",username);
                 Toast.makeText(ctx, check, Toast.LENGTH_SHORT).show();
                 startActivity(TabsIntent);
+            } else if(result.equals("Login Succesful..Admin")){
+                Intent AmdIntent = new Intent(MainActivity.this, AdminActivity.class);
+                Toast.makeText(ctx, check, Toast.LENGTH_SHORT).show();
+                startActivity(AmdIntent);
 
-                //BackIntent backIntent = new BackIntent();
-                //backIntent.Test(check);
-            } else {
+            }else{
                 Toast.makeText(ctx, "Failed to login... incorrect username or password", Toast.LENGTH_SHORT).show();
             }
         }
-
-
     }
-
-   /* public void getInstance(String tent)
-    {
-        if(tent.equals("Tab")) {
-            Intent TabsIntent = new Intent(MainActivity.this, TabActivity.class);
-        }
-    }*/
-
-    /*public void processlogin(String output) {
-        mPassword = (EditText) findViewById(R.id.edPass);
-        String username = mPassword.getText().toString().trim();
-
-
-
-        if (output.equals("regular")) {
-            Intent TabsIntent = new Intent(MainActivity.this, TabActivity.class);
-            //TabsIntent.putExtra("userS",username);
-            Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show();
-            startActivity(TabsIntent);
-        }
-        if (output.equals("admin")) {
-            Intent AdminIntent = new Intent(MainActivity.this, AdminActivity.class);
-            //TabsIntent.putExtra("userS",username);
-            startActivity(AdminIntent);
-        }
-        if (output.equals("error")) {
-            Toast.makeText(this, "Incorrect Password or Username", Toast.LENGTH_SHORT).show();
-        }
-        Toast.makeText(this, output, Toast.LENGTH_SHORT).show();
-
-    }*/
 }

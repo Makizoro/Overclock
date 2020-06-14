@@ -76,7 +76,7 @@ public class PlaceholderFragment extends Fragment {
 
         //todo: takes empty string and returns Club names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://lamp.ms.wits.ac.za/~s1746074/clubs.php",params) {
+                "http://localhost/project/tab.php",params) {
             @Override
             protected void onPostExecute(String output) {
                     LinearLayout l = (LinearLayout) root.findViewById(R.id.list);

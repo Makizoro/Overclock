@@ -29,9 +29,9 @@ public class AdminActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_activity);
         ButtonAcc = (Button) findViewById(R.id.btnAccept);
-        ButtonAcc.setVisibility(View.INVISIBLE);
+        //ButtonAcc.setVisibility(View.INVISIBLE);
         ButtonRej = (Button) findViewById(R.id.btnReject);
-        ButtonRej.setVisibility(View.INVISIBLE);
+       // ButtonRej.setVisibility(View.INVISIBLE);
         processGroups();
 
     }
@@ -50,11 +50,10 @@ public class AdminActivity extends AppCompatActivity {
 
         //todo: gets all new groups with their description as one object.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://0.100.15.21/project/getNewGroups.php",params) {
+                "http://192.168.42.43/project/reg.php",params) {
             @Override
             protected void onPostExecute(String output) {
                 LinearLayout l = (LinearLayout) findViewById(R.id.list);
-                l.removeAllViews();
                 Log.d("output", output);
                 try {
                     JSONArray ja = new JSONArray(output);
