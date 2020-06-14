@@ -62,7 +62,7 @@ public class GatheringDescriptionTest {
         onView(withId(R.id.chkClub)).perform(click());
         onView(withId(R.id.chkInterest)).perform(click());
         onView(withId(R.id.chkSocial)).perform(click());
-        onView(withId(R.id.btnConf)).perform(click());
+        //onView(withId(R.id.btnConf)).perform(click());
     }
 
 }
