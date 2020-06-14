@@ -52,32 +52,32 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\layout_admin_activity.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\layout\\admin_activity.xml"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_contact_background.png.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_contact_background.png"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_details_foreground.png.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_details_foreground.png"
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\layout_admin_activity.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\layout\\admin_activity.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_password_background.png.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\ic_password_background.png"
     },
     {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_details_foreground.png.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_details_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable_gradient.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\drawable\\gradient.xml"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_contact_round.png.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-hdpi\\ic_contact_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\layout_list_item.xml.flat",
@@ -108,12 +108,12 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_contact.png"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_password.png.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-xhdpi\\ic_password.png"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_ic_contact.xml.flat",
@@ -156,12 +156,12 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-hdpi\\ic_details.png"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable_witslogo.png.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\drawable\\witslogo.png"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_password_foreground.png.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_password_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable_witslogo.png.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\drawable\\witslogo.png"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_ic_details.xml.flat",
@@ -320,12 +320,12 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_password_round.xml"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-xxhdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_details_foreground.png.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_details_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\release\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_contact_round.png.flat",
