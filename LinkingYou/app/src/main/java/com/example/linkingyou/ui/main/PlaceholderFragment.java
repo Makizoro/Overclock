@@ -81,12 +81,6 @@ public class PlaceholderFragment extends Fragment {
             Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_main, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
-        /*pageViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
         final String Club_id = "";
         ContentValues params = new ContentValues();
         params.put("Club_id",Club_id);
@@ -180,7 +174,6 @@ public class PlaceholderFragment extends Fragment {
 
         @Override
         protected String doInBackground(String... params){
-            //String reg_url = "http://192.168.42.43/project/register.php";
             String login_url = "http://192.168.42.43/project/auth1.php";
             String method = params[0];
 

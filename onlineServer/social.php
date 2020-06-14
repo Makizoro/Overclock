@@ -7,7 +7,7 @@ $conn = mysqli_connect("localhost:3308", "root", "", $db);
 if($conn)
 {
 	
-	$q = "SELECT CSI_name FROM CSI WHERE CSI_type = 'club'";
+	$q = "SELECT CSI_name FROM CSI WHERE CSI_type = 'social' ";
 	
 	$result = mysqli_query($conn, $q);
 	

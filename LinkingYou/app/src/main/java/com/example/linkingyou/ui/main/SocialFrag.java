@@ -54,19 +54,13 @@ public class SocialFrag extends Fragment {
             Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_main, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
-        /*pageViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
         final String Social_id = "";
         ContentValues params = new ContentValues();
         params.put("Social_id",Social_id);
 
         //todo: takes empty string and returns SocialG names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://lamp.ms.wits.ac.za/~s1746074/Social.php",params) {
+                "http://192.168.42.43/project/Social.php",params) {
             @Override
             protected void onPostExecute(String output) {
                     LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
@@ -96,7 +90,7 @@ public class SocialFrag extends Fragment {
 
                                     //TODO: Gets all SocialG descriptions.
                                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                            "http://lamp.ms.wits.ac.za/~s1746074/getdesc.php", params) {
+                                            "http://192.168.42.43/project/getdesc.php", params) {
                                         @Override
                                         protected void onPostExecute(String output) {
                                             LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
