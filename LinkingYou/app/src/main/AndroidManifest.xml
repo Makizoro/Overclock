@@ -29,6 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".AdminActivity"/>
+        <activity android:name=".ProfActivity"/>
     </application>
 
 </manifest>
