@@ -20,17 +20,17 @@
 
     <Button
         android:id="@+id/btnAccept"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:background="#DC7900"
+        android:background="@drawable/btn_rounded"
         android:text="Accept Group"/>
 
     <Button
         android:id="@+id/btnReject"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#DC7900"
+        android:background="@drawable/btn_rounded"
         android:text="Reject Group"/>
 
 </LinearLayout>

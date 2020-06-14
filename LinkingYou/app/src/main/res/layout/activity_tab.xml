@@ -43,12 +43,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:outlineAmbientShadowColor="#DC7900"
+        android:outlineSpotShadowColor="#DC7900"
         app:srcCompat="@android:drawable/ic_input_add" />
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:background="#DC7900"
+        android:background="@drawable/btn_rounded"
         android:text="Create your own Group Here!"
         android:id="@+id/ButtonCreate"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
