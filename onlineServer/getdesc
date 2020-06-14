@@ -21,7 +21,7 @@ if($conn)
 		while($row = mysqli_fetch_array($result))
 		{
 			
-			array_push($response,array($row));//,$desc[1]=>$row[1],$desc[2]=>$row[2],));
+			array_push($response,array($row[0]));//,$desc[1]=>$row[1],$desc[2]=>$row[2],));
 		}
 		
 		//echo json_encode(array($response));

@@ -76,7 +76,7 @@ public class PlaceholderFragment extends Fragment {
 
         //todo: takes empty string and returns Club names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://localhost/project/tab.php",params) {
+                "http://192.168.42.43/project/clubs.php",params) {
             @Override
             protected void onPostExecute(String output) {
                     LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
@@ -106,7 +106,7 @@ public class PlaceholderFragment extends Fragment {
 
                                     //TODO: Gets all Club descriptions.
                                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                            "http://lamp.ms.wits.ac.za/~s1746074/getdesc.php", params) {
+                                            "http://192.168.42.43/project/tab.php", params) {
                                         @Override
                                         protected void onPostExecute(String output) {
                                             LinearLayout l = (LinearLayout) root.findViewById(R.id.list);

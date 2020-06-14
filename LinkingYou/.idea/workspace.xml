@@ -605,7 +605,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_27" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-14T06:32:56.058Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-14T15:26:48.906Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -985,29 +985,33 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="484" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1360.768@0.0.1360.768" timestamp="1592116008818" />
-    <state width="1300" height="-40" key="GridCell.Tab.0.bottom" timestamp="1592091496801">
+    <state width="657" height="212" key="GridCell.Tab.0.bottom" timestamp="1592148926845">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1300" height="-40" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1592091496801" />
+    <state width="657" height="212" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1592148926845" />
     <state width="1218" height="184" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1591881946130" />
-    <state width="1300" height="-40" key="GridCell.Tab.0.center" timestamp="1592091496800">
+    <state width="657" height="212" key="GridCell.Tab.0.center" timestamp="1592148926845">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1300" height="-40" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1592091496800" />
+    <state width="657" height="212" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1592148926845" />
     <state width="1218" height="184" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1591881946129" />
-    <state width="1300" height="-40" key="GridCell.Tab.0.left" timestamp="1592091496800">
+    <state width="657" height="212" key="GridCell.Tab.0.left" timestamp="1592148926845">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1300" height="-40" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1592091496800" />
+    <state width="657" height="212" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1592148926845" />
     <state width="1218" height="184" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1591881946129" />
-    <state width="1300" height="-40" key="GridCell.Tab.0.right" timestamp="1592091496800">
+    <state width="657" height="212" key="GridCell.Tab.0.right" timestamp="1592148926845">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1300" height="-40" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1592091496800" />
+    <state width="657" height="212" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1592148926845" />
     <state width="1218" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1591881946130" />
-    <state x="336" y="172" key="run.anything.popup" timestamp="1592123873624">
+    <state x="93" y="100" width="1174" height="568" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1592148646133">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="336" y="172" key="run.anything.popup/0.0.1360.768@0.0.1360.768" timestamp="1592123873624" />
+    <state x="93" y="100" width="1174" height="568" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1360.768@0.0.1360.768" timestamp="1592148646133" />
+    <state x="336" y="172" key="run.anything.popup" timestamp="1592150436200">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="336" y="172" key="run.anything.popup/0.0.1360.768@0.0.1360.768" timestamp="1592150436200" />
   </component>
 </project>
