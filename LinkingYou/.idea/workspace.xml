@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/linkingyou/GatheringDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linkingyou/GatheringDescription.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/linkingyou/ui/main/PlaceholderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linkingyou/ui/main/PlaceholderFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

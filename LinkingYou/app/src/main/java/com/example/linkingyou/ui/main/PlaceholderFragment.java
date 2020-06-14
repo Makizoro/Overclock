@@ -233,14 +233,14 @@ public class PlaceholderFragment extends Fragment {
             String check = result;
             Log.d("output", check);
             if (result.equals("Login Succesful")) {
-                Intent TabsIntent = new Intent(MainActivity.this, TabActivity.class);
+               // Intent TabsIntent = new Intent(MainActivity.this, TabActivity.class);
                 //TabsIntent.putExtra("userS",username);
                 Toast.makeText(ctx, check, Toast.LENGTH_SHORT).show();
-                startActivity(TabsIntent);
+                //startActivity(TabsIntent);
             } else if(result.equals("Login Succesful..Admin")){
-                Intent AmdIntent = new Intent(PlaceholderFragment.this, AdminActivity.class);
+               // Intent AmdIntent = new Intent(PlaceholderFragment.this, AdminActivity.class);
                 Toast.makeText(ctx, check, Toast.LENGTH_SHORT).show();
-                startActivity(AmdIntent);
+                //startActivity(AmdIntent);
 
             }else{
                 Toast.makeText(ctx, "Failed to login... incorrect username or password", Toast.LENGTH_SHORT).show();
