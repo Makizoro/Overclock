@@ -112,7 +112,12 @@ public class PlaceholderFragment extends Fragment {
                                     LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
                                     final TextView marked = (TextView)item.findViewById(R.id.textview1);
                                     String Club_ID = marked.getText().toString();
-                                    ContentValues params = new ContentValues();
+                                    
+                                    //Stuff Sayan added.
+                                    Intent Prof = new Intent(context, ProfActivity.class);
+                                    Prof.putExtra("Club_ID", Club_ID);
+                                    startActivity(Prof);
+                                    /*ContentValues params = new ContentValues();
                                     params.put("Club_ID", Club_ID);
 
                                     //TODO: Gets all Club descriptions.
@@ -142,7 +147,7 @@ public class PlaceholderFragment extends Fragment {
                                             }
                                         }
                                     };
-                                    AsyncHttpPost.execute();
+                                    AsyncHttpPost.execute();*/
                                 }
                             });
                         }
