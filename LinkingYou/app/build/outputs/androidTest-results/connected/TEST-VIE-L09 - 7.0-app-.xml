@@ -1,75 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Test results - Class com.example.linkingyou.GatheringDescriptionTest</title>
-<link href="css/base-style.css" rel="stylesheet" type="text/css"/>
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
-<script src="js/report.js" type="text/javascript"></script>
-</head>
-<body>
-<div id="content">
-<h1>Class com.example.linkingyou.GatheringDescriptionTest</h1>
-<div class="breadcrumbs">
-<a href="index.html">all</a> &gt; 
-<a href="com.example.linkingyou.html">com.example.linkingyou</a> &gt; GatheringDescriptionTest</div>
-<div id="summary">
-<table>
-<tr>
-<td>
-<div class="summaryGroup">
-<table>
-<tr>
-<td>
-<div class="infoBox" id="tests">
-<div class="counter">14</div>
-<p>tests</p>
-</div>
-</td>
-<td>
-<div class="infoBox" id="failures">
-<div class="counter">7</div>
-<p>failures</p>
-</div>
-</td>
-<td>
-<div class="infoBox" id="duration">
-<div class="counter">4m2.12s</div>
-<p>duration</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</td>
-<td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">50%</div>
-<p>successful</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div id="tabs">
-<ul class="tabLinks">
-<li>
-<a href="#tab0">Failed tests</a>
-</li>
-<li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Devices</a>
-</li>
-</ul>
-<div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="clubCheckbox"></a>
-<h3 class="failures">clubCheckbox [VIE-L09 - 7.0] (on 1/2 devices)</h3>
-<span class="code">
-<pre>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.linkingyou.ExampleInstrumentedTest" tests="20" failures="7" errors="0" skipped="0" time="251975.008" timestamp="2020-06-14T19:25:41" hostname="localhost">
+  <properties>
+    <property name="device" value="VIE-L09 - 7.0" />
+    <property name="flavor" value="" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="useAppContext" classname="com.example.linkingyou.ExampleInstrumentedTest" time="0.0" />
+  <testcase name="clubCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="33.36">
+    <failure>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
 at dalvik.system.VMStack.getThreadStackTrace(Native Method)
 at java.lang.Thread.getStackTrace(Thread.java:1581)
 at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
@@ -107,234 +45,10 @@ at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
 at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
 at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
 at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="descriptionView"></a>
-<h3 class="failures">descriptionView [all devices]</h3>
-<span class="code">
-<pre>androidx.test.espresso.PerformException: Error performing 'single click - At Coordinates: 539, 1145 and precision: 16, 16' on view 'with id: com.example.linkingyou:id/btnConf'.
-at androidx.test.espresso.PerformException$Builder.build(PerformException.java:86)
-at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:87)
-at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
-at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
-at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
-at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
-at com.example.linkingyou.GatheringDescriptionTest.descriptionView(GatheringDescriptionTest.java:65)
-at java.lang.reflect.Method.invoke(Native Method)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
-at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2075)
-Caused by: androidx.test.espresso.PerformException: Error performing 'Send down motion event' on view 'unknown'.
-at androidx.test.espresso.PerformException$Builder.build(PerformException.java:86)
-at androidx.test.espresso.action.MotionEvents.sendDown(MotionEvents.java:128)
-at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:168)
-at androidx.test.espresso.action.Tap.access$100(Tap.java:31)
-at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:47)
-at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:137)
-at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:366)
-at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:255)
-at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:65)
-at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:158)
-at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:155)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at android.os.Handler.handleCallback(Handler.java:790)
-at android.os.Handler.dispatchMessage(Handler.java:99)
-at android.os.Looper.loop(Looper.java:164)
-at android.app.ActivityThread.main(ActivityThread.java:6494)
-at java.lang.reflect.Method.invoke(Native Method)
-at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
-at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
-Caused by: androidx.test.espresso.InjectEventSecurityException: java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
-at androidx.test.espresso.base.InputManagerEventInjectionStrategy.innerInjectMotionEvent(InputManagerEventInjectionStrategy.java:164)
-at androidx.test.espresso.base.InputManagerEventInjectionStrategy.innerInjectMotionEvent(InputManagerEventInjectionStrategy.java:162)
-at androidx.test.espresso.base.InputManagerEventInjectionStrategy.injectMotionEvent(InputManagerEventInjectionStrategy.java:130)
-at androidx.test.espresso.base.EventInjector.injectMotionEvent(EventInjector.java:92)
-at androidx.test.espresso.base.UiControllerImpl$3.call(UiControllerImpl.java:230)
-at androidx.test.espresso.base.UiControllerImpl$3.call(UiControllerImpl.java:227)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:457)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
-at java.lang.Thread.run(Thread.java:764)
-Caused by: java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
-at android.os.Parcel.readException(Parcel.java:2004)
-at android.os.Parcel.readException(Parcel.java:1950)
-at android.hardware.input.IInputManager$Stub$Proxy.injectInputEvent(IInputManager.java:636)
-at android.hardware.input.InputManager.injectInputEvent(InputManager.java:925)
-at java.lang.reflect.Method.invoke(Native Method)
-at androidx.test.espresso.base.InputManagerEventInjectionStrategy.innerInjectMotionEvent(InputManagerEventInjectionStrategy.java:146)
-... 11 more
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="groupDescription"></a>
-<h3 class="failures">groupDescription [VIE-L09 - 7.0] (on 1/2 devices)</h3>
-<span class="code">
-<pre>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
-at dalvik.system.VMStack.getThreadStackTrace(Native Method)
-at java.lang.Thread.getStackTrace(Thread.java:1581)
-at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
-at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
-at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
-at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
-at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
-at com.example.linkingyou.GatheringDescriptionTest.groupDescription(GatheringDescriptionTest.java:30)
-at java.lang.reflect.Method.invoke(Native Method)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
-at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="groupName"></a>
-<h3 class="failures">groupName [VIE-L09 - 7.0] (on 1/2 devices)</h3>
-<span class="code">
-<pre>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
-at dalvik.system.VMStack.getThreadStackTrace(Native Method)
-at java.lang.Thread.getStackTrace(Thread.java:1581)
-at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
-at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
-at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
-at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
-at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
-at com.example.linkingyou.GatheringDescriptionTest.groupName(GatheringDescriptionTest.java:24)
-at java.lang.reflect.Method.invoke(Native Method)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
-at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="interestGroupCheckbox"></a>
-<h3 class="failures">interestGroupCheckbox [VIE-L09 - 7.0] (on 1/2 devices)</h3>
-<span class="code">
-<pre>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
-at dalvik.system.VMStack.getThreadStackTrace(Native Method)
-at java.lang.Thread.getStackTrace(Thread.java:1581)
-at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
-at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
-at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
-at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
-at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
-at com.example.linkingyou.GatheringDescriptionTest.interestGroupCheckbox(GatheringDescriptionTest.java:42)
-at java.lang.reflect.Method.invoke(Native Method)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
-at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="societyCheckbox"></a>
-<h3 class="failures">societyCheckbox [VIE-L09 - 7.0] (on 1/2 devices)</h3>
-<span class="code">
-<pre>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
+</failure>
+  </testcase>
+  <testcase name="societyCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="32.988">
+    <failure>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
 at dalvik.system.VMStack.getThreadStackTrace(Native Method)
 at java.lang.Thread.getStackTrace(Thread.java:1581)
 at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
@@ -372,89 +86,267 @@ at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
 at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
 at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
 at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
-<h2>Tests</h2>
-<table>
-<thead>
-<tr>
-<th>Test</th>
-<th>Nexus_5X_API_27(AVD) - 8.1.0</th>
-<th>VIE-L09 - 7.0</th>
-</tr>
-</thead>
-<tr>
-<td>clubCheckbox</td>
-<td class="success">passed (1.742s)</td>
-<td class="failures">failed (33.360s)</td>
-</tr>
-<tr>
-<td>descriptionView</td>
-<td class="failures">failed (3.588s)</td>
-<td class="failures">failed (33.078s)</td>
-</tr>
-<tr>
-<td>groupDeatsButton</td>
-<td class="success">passed (0.699s)</td>
-<td class="success">passed (33.226s)</td>
-</tr>
-<tr>
-<td>groupDescription</td>
-<td class="success">passed (1.610s)</td>
-<td class="failures">failed (33.010s)</td>
-</tr>
-<tr>
-<td>groupName</td>
-<td class="success">passed (0.997s)</td>
-<td class="failures">failed (33.002s)</td>
-</tr>
-<tr>
-<td>interestGroupCheckbox</td>
-<td class="success">passed (0.905s)</td>
-<td class="failures">failed (33.076s)</td>
-</tr>
-<tr>
-<td>societyCheckbox</td>
-<td class="success">passed (0.836s)</td>
-<td class="failures">failed (32.988s)</td>
-</tr>
-</table>
-</div>
-<div id="tab2" class="tab">
-<h2>Devices</h2>
-<table>
-<thead>
-<tr>
-<th>Devices</th>
-<th>Tests</th>
-<th>Failures</th>
-<th>Duration</th>
-<th>Success rate</th>
-</tr>
-</thead>
-<tr>
-<td class="failures">Nexus_5X_API_27(AVD) - 8.1.0</td>
-<td>7</td>
-<td>1</td>
-<td>10.377s</td>
-<td>85%</td>
-</tr>
-<tr>
-<td class="failures">VIE-L09 - 7.0</td>
-<td>7</td>
-<td>6</td>
-<td>3m51.74s</td>
-<td>14%</td>
-</tr>
-</table>
-</div>
-</div>
-<div id="footer">
-<p>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1.1</a> at Jun 14, 2020 9:25:43 PM</p>
-</div>
-</div>
-</body>
+</failure>
+  </testcase>
+  <testcase name="groupName" classname="com.example.linkingyou.GatheringDescriptionTest" time="33.002">
+    <failure>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
+at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+at java.lang.Thread.getStackTrace(Thread.java:1581)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
+at com.example.linkingyou.GatheringDescriptionTest.groupName(GatheringDescriptionTest.java:24)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
+at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
+</failure>
+  </testcase>
+  <testcase name="groupDescription" classname="com.example.linkingyou.GatheringDescriptionTest" time="33.01">
+    <failure>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
+at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+at java.lang.Thread.getStackTrace(Thread.java:1581)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
+at com.example.linkingyou.GatheringDescriptionTest.groupDescription(GatheringDescriptionTest.java:30)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
+at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
+</failure>
+  </testcase>
+  <testcase name="interestGroupCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="33.076">
+    <failure>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
+at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+at java.lang.Thread.getStackTrace(Thread.java:1581)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
+at com.example.linkingyou.GatheringDescriptionTest.interestGroupCheckbox(GatheringDescriptionTest.java:42)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
+at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
+</failure>
+  </testcase>
+  <testcase name="descriptionView" classname="com.example.linkingyou.GatheringDescriptionTest" time="33.078">
+    <failure>androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
+at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+at java.lang.Thread.getStackTrace(Thread.java:1581)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:96)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
+at com.example.linkingyou.GatheringDescriptionTest.descriptionView(GatheringDescriptionTest.java:60)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
+at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
+</failure>
+  </testcase>
+  <testcase name="groupDeatsButton" classname="com.example.linkingyou.GatheringDescriptionTest" time="33.226" />
+  <testcase name="loginButton" classname="com.example.linkingyou.MainActivityTest" time="0.718" />
+  <testcase name="usernameText" classname="com.example.linkingyou.MainActivityTest" time="0.893" />
+  <testcase name="regLink" classname="com.example.linkingyou.MainActivityTest" time="0.511" />
+  <testcase name="passText" classname="com.example.linkingyou.MainActivityTest" time="0.842" />
+  <testcase name="processLogin" classname="com.example.linkingyou.MainActivityTest" time="1.941">
+    <failure>androidx.test.espresso.PerformException: Error performing 'single click - At Coordinates: 539, 1248 and precision: 16, 16' on view 'Animations or transitions are enabled on the target device.
+For more info check: https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
+with id: com.example.linkingyou:id/edPass'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:86)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:87)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:59)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:322)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:178)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:119)
+at com.example.linkingyou.MainActivityTest.processLogin(MainActivityTest.java:45)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:527)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
+at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1977)
+Caused by: androidx.test.espresso.PerformException: Error performing 'Send down motion event' on view 'unknown'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:86)
+at androidx.test.espresso.action.MotionEvents.sendDown(MotionEvents.java:128)
+at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:168)
+at androidx.test.espresso.action.Tap.access$100(Tap.java:31)
+at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:47)
+at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:137)
+at androidx.test.espresso.action.TypeTextAction.perform(TypeTextAction.java:104)
+at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:366)
+at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:255)
+at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:65)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:158)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:155)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:761)
+at android.os.Handler.dispatchMessage(Handler.java:98)
+at android.os.Looper.loop(Looper.java:156)
+at android.app.ActivityThread.main(ActivityThread.java:6523)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:942)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:832)
+Caused by: androidx.test.espresso.InjectEventSecurityException: java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
+at androidx.test.espresso.base.InputManagerEventInjectionStrategy.innerInjectMotionEvent(InputManagerEventInjectionStrategy.java:164)
+at androidx.test.espresso.base.InputManagerEventInjectionStrategy.innerInjectMotionEvent(InputManagerEventInjectionStrategy.java:162)
+at androidx.test.espresso.base.InputManagerEventInjectionStrategy.injectMotionEvent(InputManagerEventInjectionStrategy.java:130)
+at androidx.test.espresso.base.EventInjector.injectMotionEvent(EventInjector.java:92)
+at androidx.test.espresso.base.UiControllerImpl$3.call(UiControllerImpl.java:230)
+at androidx.test.espresso.base.UiControllerImpl$3.call(UiControllerImpl.java:227)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:428)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+at java.lang.Thread.run(Thread.java:776)
+Caused by: java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
+at android.os.Parcel.readException(Parcel.java:1665)
+at android.os.Parcel.readException(Parcel.java:1618)
+at android.hardware.input.IInputManager$Stub$Proxy.injectInputEvent(IInputManager.java:546)
+at android.hardware.input.InputManager.injectInputEvent(InputManager.java:871)
+at java.lang.reflect.Method.invoke(Native Method)
+at androidx.test.espresso.base.InputManagerEventInjectionStrategy.innerInjectMotionEvent(InputManagerEventInjectionStrategy.java:146)
+... 11 more
+</failure>
+  </testcase>
+  <testcase name="passConText" classname="com.example.linkingyou.RegisterActivityTest" time="0.865" />
+  <testcase name="studNoText" classname="com.example.linkingyou.RegisterActivityTest" time="0.966" />
+  <testcase name="usernameText" classname="com.example.linkingyou.RegisterActivityTest" time="0.765" />
+  <testcase name="passText" classname="com.example.linkingyou.RegisterActivityTest" time="0.892" />
+  <testcase name="backButton" classname="com.example.linkingyou.RegisterActivityTest" time="0.535" />
+  <testcase name="addGroup" classname="com.example.linkingyou.TabActivityTest" time="0.643" />
+  <testcase name="createButton" classname="com.example.linkingyou.TabActivityTest" time="0.205" />
+</testsuite>

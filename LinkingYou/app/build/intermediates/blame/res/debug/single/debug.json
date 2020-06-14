@@ -1,11 +1,11 @@
 [
     {
-        "merged": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "G:\\overclock\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.jpeg.flat",
         "source": "G:\\overclock\\Overclock\\LinkingYou\\app\\src\\main\\res\\drawable\\background.jpeg"
+    },
+    {
+        "merged": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "G:\\overclock\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_main.xml.flat",
@@ -20,12 +20,12 @@
         "source": "G:\\overclock\\Overclock\\LinkingYou\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
-        "source": "G:\\overclock\\Overclock\\LinkingYou\\app\\src\\main\\res\\layout\\list_item.xml"
-    },
-    {
         "merged": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
         "source": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
+        "source": "G:\\overclock\\Overclock\\LinkingYou\\app\\src\\main\\res\\layout\\list_item.xml"
     },
     {
         "merged": "G:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
