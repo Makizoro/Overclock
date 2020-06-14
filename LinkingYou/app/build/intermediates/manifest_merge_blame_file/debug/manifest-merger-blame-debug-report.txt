@@ -6,83 +6,83 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml
+8-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml
+9-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:5:5-67
-11-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:5:22-64
+11-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:5:5-67
+11-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:6:5-79
-12-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:6:22-76
+12-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:6:5-79
+12-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:6:22-76
 13
 14    <application
-14-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:8:5-32:19
+14-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:8:5-32:19
 15        android:allowBackup="true"
-15-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:10:9-35
+15-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:10:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/03736cf4bc3669a69d502627b70a527e/core-1.1.0/AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.1.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\03736cf4bc3669a69d502627b70a527e\core-1.1.0\AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
 18        android:icon="@mipmap/ic_launcher"
-18-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:11:9-43
+18-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:11:9-43
 19        android:label="@string/app_name"
-19-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:12:9-41
+19-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:12:9-41
 20        android:roundIcon="@mipmap/ic_launcher_round"
-20-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:13:9-54
+20-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:13:9-54
 21        android:supportsRtl="true"
-21-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:14:9-35
+21-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:14:9-35
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme"
-23-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:15:9-40
+23-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:15:9-40
 24        android:usesCleartextTraffic="true" >
-24-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:9:9-44
+24-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:9:9-44
 25        <activity android:name="com.example.linkingyou.GatheringDescription" />
-25-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:16:9-58
-25-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:16:19-55
+25-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:16:9-58
+25-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:16:19-55
 26        <activity
-26-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:17:9-26:20
+26-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:17:9-26:20
 27            android:name="com.example.linkingyou.MainActivity"
-27-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:18:13-41
+27-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:18:13-41
 28            android:label="@string/app_name"
-28-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:19:13-45
+28-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:19:13-45
 29            android:theme="@style/AppTheme.NoActionBar" >
-29-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:20:13-56
+29-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:20:13-56
 30            <intent-filter>
-30-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:21:13-25:29
+30-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:21:13-25:29
 31                <action android:name="android.intent.action.MAIN" />
-31-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:22:17-69
-31-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:22:25-66
+31-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:22:17-69
+31-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:22:25-66
 32
 33                <category android:name="android.intent.category.LAUNCHER" />
-33-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:24:17-77
-33-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:24:27-74
+33-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:24:17-77
+33-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:24:27-74
 34            </intent-filter>
 35        </activity>
 36        <activity android:name="com.example.linkingyou.RegisterActivity" />
-36-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:27:9-54
-36-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:27:19-51
+36-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:27:9-54
+36-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:27:19-51
 37        <activity
-37-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:28:9-30:20
+37-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:28:9-30:20
 38            android:name="com.example.linkingyou.TabActivity"
-38-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:28:19-46
+38-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:28:19-46
 39            android:theme="@style/AppTheme.NoActionBar" >
-39-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:29:13-56
+39-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:29:13-56
 40        </activity>
 41        <activity android:name="com.example.linkingyou.AdminActivity" />
-41-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:31:9-50
-41-->/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/src/main/AndroidManifest.xml:31:19-48
+41-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:31:9-50
+41-->G:\overclock\Overclock\LinkingYou\app\src\main\AndroidManifest.xml:31:19-48
 42
 43        <provider
-43-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/12565117c533432cd60af9b41fd49aa9/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+43-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
 44            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-44-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/12565117c533432cd60af9b41fd49aa9/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+44-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
 45            android:authorities="com.example.linkingyou.lifecycle-process"
-45-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/12565117c533432cd60af9b41fd49aa9/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+45-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
 46            android:exported="false"
-46-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/12565117c533432cd60af9b41fd49aa9/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+46-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
 47            android:multiprocess="true" />
-47-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/12565117c533432cd60af9b41fd49aa9/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+47-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
 48    </application>
 49
 50</manifest>

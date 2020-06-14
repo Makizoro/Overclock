@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -66,12 +67,13 @@ public class InterestFrag extends Fragment {
 
         //TODO: Gets all InterestG Names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://lamp.ms.wits.ac.za/~s1746074/Interest.php",params) {
+                "http://localhost/project/tab.php",params) {
             @Override
             protected void onPostExecute(String output) {
                     LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
                     l.removeAllViews();
                     Log.d("output", output);
+
                     try {
                         JSONArray ja = new JSONArray(output);
                         for (int i = 0; i < ja.length(); i++) {

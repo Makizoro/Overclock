@@ -538,9 +538,45 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LinkingYou" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LinkingYou" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LinkingYou" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LinkingYou" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LinkingYou" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LinkingYou" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -551,9 +587,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile_vertical" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -568,8 +604,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="ed79ce117d24" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-10T23:05:01.527Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_27" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-14T06:32:56.058Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -593,7 +629,7 @@
       <recent name="com.example.linkingyou.ui.main" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Android App.LinkingYou-app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -648,6 +684,57 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="com.example.linkingyou.AdminActivity" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkingYou-app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="LinkingYou-app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -890,21 +977,37 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1218" height="184" key="GridCell.Tab.0.bottom" timestamp="1591881946130">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="272" y="42" key="#Notifications" timestamp="1592115551235">
+      <screen x="0" y="0" width="1360" height="768" />
     </state>
+    <state x="272" y="42" key="#Notifications/0.0.1360.768@0.0.1360.768" timestamp="1592115551235" />
+    <state x="484" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1592116008818">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="484" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1360.768@0.0.1360.768" timestamp="1592116008818" />
+    <state width="1300" height="-40" key="GridCell.Tab.0.bottom" timestamp="1592091496801">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1300" height="-40" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1592091496801" />
     <state width="1218" height="184" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1591881946130" />
-    <state width="1218" height="184" key="GridCell.Tab.0.center" timestamp="1591881946129">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1300" height="-40" key="GridCell.Tab.0.center" timestamp="1592091496800">
+      <screen x="0" y="0" width="1360" height="768" />
     </state>
+    <state width="1300" height="-40" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1592091496800" />
     <state width="1218" height="184" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1591881946129" />
-    <state width="1218" height="184" key="GridCell.Tab.0.left" timestamp="1591881946129">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1300" height="-40" key="GridCell.Tab.0.left" timestamp="1592091496800">
+      <screen x="0" y="0" width="1360" height="768" />
     </state>
+    <state width="1300" height="-40" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1592091496800" />
     <state width="1218" height="184" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1591881946129" />
-    <state width="1218" height="184" key="GridCell.Tab.0.right" timestamp="1591881946130">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1300" height="-40" key="GridCell.Tab.0.right" timestamp="1592091496800">
+      <screen x="0" y="0" width="1360" height="768" />
     </state>
+    <state width="1300" height="-40" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1592091496800" />
     <state width="1218" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1591881946130" />
+    <state x="336" y="172" key="run.anything.popup" timestamp="1592123873624">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="336" y="172" key="run.anything.popup/0.0.1360.768@0.0.1360.768" timestamp="1592123873624" />
   </component>
 </project>
