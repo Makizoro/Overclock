@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="com.example.linkingyou.ExampleInstrumentedTest" tests="7" failures="1" errors="0" skipped="0" time="0.0" timestamp="2020-06-14T12:06:11" hostname="localhost">
+<testsuite name="com.example.linkingyou.ExampleInstrumentedTest" tests="7" failures="1" errors="0" skipped="0" time="0.0" timestamp="2020-06-14T12:12:33" hostname="localhost">
   <properties>
     <property name="device" value="HUAWEI CRR-UL00 - 5.1.1" />
     <property name="flavor" value="" />
     <property name="project" value="app" />
   </properties>
-  <testcase name="useAppContext" classname="com.example.linkingyou.ExampleInstrumentedTest" time="0.002" />
-  <testcase name="clubCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="33.798" />
-  <testcase name="societyCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.718" />
-  <testcase name="groupName" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.843" />
-  <testcase name="groupDescription" classname="com.example.linkingyou.GatheringDescriptionTest" time="1.675" />
-  <testcase name="interestGroupCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.493" />
-  <testcase name="descriptionView" classname="com.example.linkingyou.GatheringDescriptionTest" time="24.338">
+  <testcase name="useAppContext" classname="com.example.linkingyou.ExampleInstrumentedTest" time="0.0" />
+  <testcase name="clubCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.798" />
+  <testcase name="societyCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.513" />
+  <testcase name="groupName" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.794" />
+  <testcase name="groupDescription" classname="com.example.linkingyou.GatheringDescriptionTest" time="1.316" />
+  <testcase name="interestGroupCheckbox" classname="com.example.linkingyou.GatheringDescriptionTest" time="0.464" />
+  <testcase name="descriptionView" classname="com.example.linkingyou.GatheringDescriptionTest" time="32.587">
     <failure>Test failed to run to completion. Reason: 'Instrumentation run failed due to 'Process crashed.''. Check device logcat for details</failure>
   </testcase>
 </testsuite>

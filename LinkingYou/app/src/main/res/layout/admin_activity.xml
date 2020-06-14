@@ -22,6 +22,7 @@
         android:id="@+id/btnAccept"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:shadowRadius="50"
         android:background="@drawable/btn_rounded"
         android:text="Accept Group"/>
 
@@ -30,6 +31,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:shadowRadius="50"
         android:background="@drawable/btn_rounded"
         android:text="Reject Group"/>
 

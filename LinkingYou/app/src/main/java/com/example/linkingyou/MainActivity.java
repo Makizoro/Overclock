@@ -46,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(registerIntent);
             }
         });
+
+        if(mUsername.getText().toString() == ""){
+            Toast.makeText(this,"Password or username missing",Toast.LENGTH_SHORT).show();
+        }
         mButtonLog.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
@@ -65,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
                 asyncHttpPost.execute();
-            }
+        }
         });
     }
 
