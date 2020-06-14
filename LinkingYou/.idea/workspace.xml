@@ -10,18 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b269e4c0-7929-4389-933a-d980e32b8026" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/linkingyou/GatheringDescriptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/linkingyou/GatheringDescriptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/linkingyou/MainActivityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/linkingyou/MainActivityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tab.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -378,25 +368,25 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1592134046643" />
-    <state width="1491" height="222" key="GridCell.Tab.0.bottom" timestamp="1592143162678">
+    <state width="1491" height="222" key="GridCell.Tab.0.bottom" timestamp="1592144983247">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1491" height="222" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1592143162678" />
+    <state width="1491" height="222" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1592144983247" />
     <state width="1218" height="184" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1591881946130" />
-    <state width="1491" height="222" key="GridCell.Tab.0.center" timestamp="1592143162678">
+    <state width="1491" height="222" key="GridCell.Tab.0.center" timestamp="1592144983247">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1491" height="222" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1592143162678" />
+    <state width="1491" height="222" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1592144983247" />
     <state width="1218" height="184" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1591881946129" />
-    <state width="1491" height="222" key="GridCell.Tab.0.left" timestamp="1592143162678">
+    <state width="1491" height="222" key="GridCell.Tab.0.left" timestamp="1592144983247">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1491" height="222" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1592143162678" />
+    <state width="1491" height="222" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1592144983247" />
     <state width="1218" height="184" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1591881946129" />
-    <state width="1491" height="222" key="GridCell.Tab.0.right" timestamp="1592143162678">
+    <state width="1491" height="222" key="GridCell.Tab.0.right" timestamp="1592144983247">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1491" height="222" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1592143162678" />
+    <state width="1491" height="222" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1592144983247" />
     <state width="1218" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1591881946130" />
     <state width="1476" height="274" key="GridCell.Tab.1.bottom" timestamp="1592137209926">
       <screen x="0" y="0" width="1536" height="864" />

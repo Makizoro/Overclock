@@ -56,7 +56,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:drawableLeft="@drawable/ic_contact_foreground"
-        android:hint="Student ID"
+        android:hint="Email Address"
         android:textColorHint="#000000"
         android:textColor="#DCD19E"
         android:inputType="textPersonName"

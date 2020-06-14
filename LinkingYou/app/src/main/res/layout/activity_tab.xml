@@ -50,7 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:shadowRadius="50"
+        android:onClick="userTab"
         android:background="@drawable/btn_rounded"
         android:text="Create your own Group Here!"
         android:id="@+id/ButtonCreate"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
