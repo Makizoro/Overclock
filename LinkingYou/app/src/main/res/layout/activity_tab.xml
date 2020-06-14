@@ -49,7 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:background="#DC7900"
-        android:onClick="userTab"
         android:text="Create your own Group Here!"
         android:id="@+id/ButtonCreate"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

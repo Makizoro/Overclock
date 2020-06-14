@@ -1,7 +1,11 @@
 package com.example.linkingyou.ui.main;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.ContentValues;
+import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,11 +19,26 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.linkingyou.AdminActivity;
 import com.example.linkingyou.AsyncHTTPPost;
+import com.example.linkingyou.MainActivity;
 import com.example.linkingyou.R;
+import com.example.linkingyou.TabActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -47,9 +66,87 @@ public class InterestFrag extends Fragment {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
         }
         pageViewModel.setIndex(index);
+
     }
 
-    @Override
+    public void interest(View v){
+        BackgroundTask backgroundTask = new BackgroundTask(this);
+
+    }
+
+    class BackgroundTask extends AsyncTask<String,Void,String> {
+
+        AlertDialog alertDialog;
+        InterestFrag ctx;
+
+        BackgroundTask(InterestFrag ctx) {
+            this.ctx = ctx;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            // alertDialog = new AlertDialog.Builder(ctx).create();
+            //  alertDialog.setTitle("Login information...");
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            //String reg_url = "http://192.168.42.43/project/register.php";
+            String interest_url = "http://192.168.42.43/project/getInterest.php";
+            String method = params[0];
+
+            if (method.equals("Login")) {
+                String login_name = params[1];
+                String password = params[2];
+                try {
+                    URL url = new URL(interest_url);
+                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                    httpURLConnection.setRequestMethod("POST");
+                    httpURLConnection.setDoOutput(true);
+
+                    OutputStream OS = httpURLConnection.getOutputStream();
+                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, "UTF-8"));
+                    String data = URLEncoder.encode("user_name", "UTF-8") + "=" + URLEncoder.encode(login_name, "UTF-8") + "&" +
+                            URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
+                    bufferedWriter.write(data);
+                    bufferedWriter.flush();
+                    bufferedWriter.close();
+                    OS.close();
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                    String response = "";
+                    String line = "";
+                    while ((line = bufferedReader.readLine()) != null) {
+                        response += line;
+                    }
+                    bufferedReader.close();
+                    inputStream.close();
+                    httpURLConnection.disconnect();
+
+                    return response;
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            String check = result;
+            Log.d("output", check);
+
+        }
+    }
+    /*@Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -60,7 +157,7 @@ public class InterestFrag extends Fragment {
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });*/
+        });
         final String Interest_id = "";
         ContentValues params = new ContentValues();
         params.put("Interest_id",Interest_id);
@@ -136,7 +233,7 @@ public class InterestFrag extends Fragment {
 
 
         return root;
-    }
+    }*/
 
 
 }
