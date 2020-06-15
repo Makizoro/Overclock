@@ -29,7 +29,7 @@ public class ProfActivity extends AppCompatActivity {
         params.put("GroupName", GroupName);
 
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                "http://192.168.110.1/project/getEvents.php", params) {
+                "http://192.168.110.1/project/getDesc.php", params) {
             @Override
             protected void onPostExecute(String output) {
                 TextView assigntxt = (TextView) findViewById(R.id.textv2);
