@@ -2,6 +2,7 @@ package com.example.linkingyou.ui.main;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -49,6 +50,8 @@ public class InterestFrag extends Fragment {
 
     private PageViewModel pageViewModel;
 
+    Activity context;
+    
     public static InterestFrag newInstance(int index) {
         InterestFrag fragment = new InterestFrag();
         Bundle bundle = new Bundle();
@@ -74,6 +77,7 @@ public class InterestFrag extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+        context.getParentActivityIntent();
         final View root = inflater.inflate(R.layout.fragment_main, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
         /*pageViewModel.getText().observe(this, new Observer<String>() {
@@ -114,7 +118,12 @@ public class InterestFrag extends Fragment {
                                     LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
                                     final TextView marked = (TextView)item.findViewById(R.id.textview1);
                                     String Interest_ID = marked.getText().toString();
-                                    ContentValues params = new ContentValues();
+                                    
+                                    //Stuff Sayan added.
+                                Intent Prof = new Intent(this, ProfActivity.class);
+                                Prof.putExtra("Club_ID", Club_ID);
+                                startActivity(Prof);
+                                    /*ContentValues params = new ContentValues();
                                     params.put("Interest_ID", Interest_ID);
 
                                     //TODO: Gets all InterestG descriptions.
@@ -144,7 +153,7 @@ public class InterestFrag extends Fragment {
                                             }
                                         }
                                     };
-                                    AsyncHttpPost.execute();
+                                    AsyncHttpPost.execute();*/
                                 }
                             });
                         }
