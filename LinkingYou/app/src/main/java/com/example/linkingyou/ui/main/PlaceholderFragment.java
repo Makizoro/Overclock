@@ -2,6 +2,7 @@ package com.example.linkingyou.ui.main;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -56,6 +57,8 @@ public class PlaceholderFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     private PageViewModel pageViewModel;
+    
+    Activity context;
 
     public static PlaceholderFragment newInstance(int index) {
         PlaceholderFragment fragment = new PlaceholderFragment();
@@ -80,6 +83,7 @@ public class PlaceholderFragment extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+        context.getParentActivityIntent();
         final View root = inflater.inflate(R.layout.fragment_main, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
         final String Club_id = "";
@@ -115,10 +119,10 @@ public class PlaceholderFragment extends Fragment {
                                 String Club_ID = marked.getText().toString();
 
                                 //Stuff Sayan added.
-                                //Intent Prof = new Intent(this, ProfActivity.class);
-                                //Prof.putExtra("Club_ID", Club_ID);
-                                //startActivity(Prof);
-                                    ContentValues params = new ContentValues();
+                                Intent Prof = new Intent(this, ProfActivity.class);
+                                Prof.putExtra("Club_ID", Club_ID);
+                                startActivity(Prof);
+                                    /*ContentValues params = new ContentValues();
                                     params.put("Club_ID", Club_ID);
 
                                     //TODO: Gets all Club descriptions.
@@ -148,7 +152,7 @@ public class PlaceholderFragment extends Fragment {
                                             }
                                         }
                                     };
-                                    AsyncHttpPost.execute();
+                                    AsyncHttpPost.execute();*/
                             }
                         });
                     }
