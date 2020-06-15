@@ -121,7 +121,7 @@ public class InterestFrag extends Fragment {
                                     
                                     //Stuff Sayan added.
                                 Intent Prof = new Intent(context, ProfActivity.class);
-                                Prof.putExtra("Club_ID", Club_ID);
+                                Prof.putExtra("Interest_ID", Interest_ID);
                                 startActivity(Prof);
                                     /*ContentValues params = new ContentValues();
                                     params.put("Interest_ID", Interest_ID);
