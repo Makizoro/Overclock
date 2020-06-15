@@ -28,6 +28,7 @@ import com.example.linkingyou.AdminActivity;
 import com.example.linkingyou.AsyncHTTPPost;
 import com.example.linkingyou.GatheringDescription;
 import com.example.linkingyou.MainActivity;
+import com.example.linkingyou.ProfActivity;
 import com.example.linkingyou.R;
 import com.example.linkingyou.TabActivity;
 import androidx.appcompat.app.AppCompatActivity;
@@ -114,9 +115,9 @@ public class PlaceholderFragment extends Fragment {
                                     String Club_ID = marked.getText().toString();
                                     
                                     //Stuff Sayan added.
-                                    Intent Prof = new Intent(context, ProfActivity.class);
-                                    Prof.putExtra("Club_ID", Club_ID);
-                                    startActivity(Prof);
+                                    //Intent Prof = new Intent(this, ProfActivity.class);
+                                    //Prof.putExtra("Club_ID", Club_ID);
+                                    //startActivity(Prof);
                                     /*ContentValues params = new ContentValues();
                                     params.put("Club_ID", Club_ID);
 

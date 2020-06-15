@@ -1,4 +1,7 @@
-#Sun Jun 14 21:21:06 CAT 2020
-base.0=G\:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Jun 15 07:18:38 SAST 2020
+base.0=/Users/mac/Documents/GitHub/Overclock/LinkingYou/G\:\\overclock\\Overclock\\LinkingYou\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=/Users/mac/Documents/GitHub/Overclock/LinkingYou/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
