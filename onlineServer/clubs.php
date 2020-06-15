@@ -17,7 +17,7 @@ if($conn)
 		array_push($response,array($row[0]));
 	}
 	
-	echo json_encode(array($response));
+	echo json_encode($response);
 	//echo $respons
 }
 mysqli_close($conn);

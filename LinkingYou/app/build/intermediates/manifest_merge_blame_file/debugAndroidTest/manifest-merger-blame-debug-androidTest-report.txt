@@ -3,35 +3,35 @@
 3    package="com.example.linkingyou.test" >
 4
 5    <uses-sdk
-5-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:5:5-74
+5-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:5:5-74
 6        android:minSdkVersion="16"
-6-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:5:15-41
+6-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:5:15-41
 7        android:targetSdkVersion="29" />
-7-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:5:42-71
+7-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:5:42-71
 8
 9    <instrumentation
-9-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:11:5-15:72
+9-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:11:5-15:72
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:11:22-76
+10-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:11:22-76
 11        android:functionalTest="false"
-11-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:14:22-52
+11-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:14:22-52
 12        android:handleProfiling="false"
-12-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:13:22-53
+12-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:13:22-53
 13        android:label="Tests for com.example.linkingyou"
-13-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:15:22-70
+13-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:15:22-70
 14        android:targetPackage="com.example.linkingyou" />
-14-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:12:22-68
+14-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:12:22-68
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.2.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\fb8ad957e50de2e516587597c0259a0c\jetified-core-1.2.0\AndroidManifest.xml:24:5-72
 16-->[androidx.test:core:1.2.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\fb8ad957e50de2e516587597c0259a0c\jetified-core-1.2.0\AndroidManifest.xml:24:22-69
 17
 18    <application android:debuggable="true" >
-18-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:7:5-9:19
-18-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:7:18-43
+18-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:7:5-9:19
+18-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:7:18-43
 19        <uses-library android:name="android.test.runner" />
-19-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:8:9-60
-19-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger632782904096479219.xml:8:23-57
+19-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:8:9-60
+19-->G:\overclock\Overclock\LinkingYou\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger921851064436452212.xml:8:23-57
 20
 21        <activity
 21-->[androidx.test:core:1.2.0] C:\Users\Godly\.gradle\caches\transforms-2\files-2.1\fb8ad957e50de2e516587597c0259a0c\jetified-core-1.2.0\AndroidManifest.xml:27:9-33:20

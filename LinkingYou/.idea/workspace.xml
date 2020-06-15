@@ -298,7 +298,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="N9Q7N16C09000372" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_27" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -377,7 +377,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_27" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-14T06:32:56.058Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-15T07:53:06.752Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -401,7 +401,7 @@
       <recent name="com.example.linkingyou.ui.main" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.LinkingYou-app">
+  <component name="RunManager" selected="Gradle.LinkingYou [createDebugCoverageReport]">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -659,7 +659,7 @@
       </method>
     </configuration>
     <configuration name="Tests in 'com.example.linkingyou'" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
-      <module name="app" />
+      <module name="LinkingYou-app" />
       <option name="TESTING_TYPE" value="1" />
       <option name="METHOD_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -727,9 +727,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Android Instrumented Tests.Tests in 'com.example.linkingyou'" />
         <item itemvalue="Gradle.LinkingYou [createDebugCoverageReport]" />
         <item itemvalue="Android Instrumented Tests.TabActivityTest" />
-        <item itemvalue="Android Instrumented Tests.Tests in 'com.example.linkingyou'" />
         <item itemvalue="Android App.AdminActivity" />
         <item itemvalue="Android Instrumented Tests.AdminActivityTestR" />
       </list>
@@ -753,6 +753,10 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="272" y="42" key="#Notifications/0.0.1360.768@0.0.1360.768" timestamp="1592115551235" />
+    <state x="399" y="29" key="#Tests_in_'com.example.linkingyou'" timestamp="1592208897929">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="399" y="29" key="#Tests_in_'com.example.linkingyou'/0.0.1360.768@0.0.1360.768" timestamp="1592208897929" />
     <state x="333" y="41" key="#app" timestamp="1592197929449">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -765,10 +769,30 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="328" y="146" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.777@0.23.1280.777" timestamp="1592153816346" />
+    <state width="1300" height="93" key="GridCell.Tab.0.bottom" timestamp="1592209043546">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1300" height="93" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1592209043546" />
     <state width="1218" height="184" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1591881946130" />
+    <state width="1300" height="93" key="GridCell.Tab.0.center" timestamp="1592209043546">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1300" height="93" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1592209043546" />
     <state width="1218" height="184" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1591881946129" />
+    <state width="1300" height="93" key="GridCell.Tab.0.left" timestamp="1592209043546">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1300" height="93" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1592209043546" />
     <state width="1218" height="184" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1591881946129" />
+    <state width="1300" height="93" key="GridCell.Tab.0.right" timestamp="1592209043546">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1300" height="93" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1592209043546" />
     <state width="1218" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1591881946130" />
+    <state x="181" y="26" key="SettingsEditor" timestamp="1592208965987">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="181" y="26" key="SettingsEditor/0.0.1360.768@0.0.1360.768" timestamp="1592208965987" />
     <state x="336" y="172" key="run.anything.popup" timestamp="1592123873624">
       <screen x="0" y="0" width="1360" height="768" />
     </state>

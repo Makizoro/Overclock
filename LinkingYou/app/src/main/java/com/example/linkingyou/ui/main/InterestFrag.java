@@ -69,83 +69,8 @@ public class InterestFrag extends Fragment {
 
     }
 
-    public void interest(View v){
-        BackgroundTask backgroundTask = new BackgroundTask(this);
 
-    }
-
-    class BackgroundTask extends AsyncTask<String,Void,String> {
-
-        AlertDialog alertDialog;
-        InterestFrag ctx;
-
-        BackgroundTask(InterestFrag ctx) {
-            this.ctx = ctx;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            // alertDialog = new AlertDialog.Builder(ctx).create();
-            //  alertDialog.setTitle("Login information...");
-        }
-
-        @Override
-        protected String doInBackground(String... params) {
-            String interest_url = "http://192.168.42.43/project/getInterest.php";
-            String method = params[0];
-
-            if (method.equals("Login")) {
-                String login_name = params[1];
-                String password = params[2];
-                try {
-                    URL url = new URL(interest_url);
-                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                    httpURLConnection.setRequestMethod("POST");
-                    httpURLConnection.setDoOutput(true);
-
-                    OutputStream OS = httpURLConnection.getOutputStream();
-                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, "UTF-8"));
-                    String data = URLEncoder.encode("user_name", "UTF-8") + "=" + URLEncoder.encode(login_name, "UTF-8") + "&" +
-                            URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
-                    bufferedWriter.write(data);
-                    bufferedWriter.flush();
-                    bufferedWriter.close();
-                    OS.close();
-
-                    InputStream inputStream = httpURLConnection.getInputStream();
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
-                    String response = "";
-                    String line = "";
-                    while ((line = bufferedReader.readLine()) != null) {
-                        response += line;
-                    }
-                    bufferedReader.close();
-                    inputStream.close();
-                    httpURLConnection.disconnect();
-
-                    return response;
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(Void... values) {
-            super.onProgressUpdate(values);
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            String check = result;
-            Log.d("output", check);
-
-        }
-    }
-    /*@Override
+    @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -156,14 +81,14 @@ public class InterestFrag extends Fragment {
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         final String Interest_id = "";
         ContentValues params = new ContentValues();
         params.put("Interest_id",Interest_id);
 
         //TODO: Gets all InterestG Names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://localhost/project/tab.php",params) {
+                "http://192.168.110.1/project/tab.php",params) {
             @Override
             protected void onPostExecute(String output) {
                     LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
@@ -232,7 +157,7 @@ public class InterestFrag extends Fragment {
 
 
         return root;
-    }*/
+    }
 
 
 }

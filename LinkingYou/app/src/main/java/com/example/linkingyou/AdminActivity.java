@@ -50,7 +50,7 @@ public class AdminActivity extends AppCompatActivity {
 
         //todo: gets all new groups with their description as one object.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://192.168.42.43/project/reg.php",params) {
+                "http://192.168.110.1/project/reg.php",params) {
             @Override
             protected void onPostExecute(String output) {
                 LinearLayout l = (LinearLayout) findViewById(R.id.list);
@@ -85,7 +85,7 @@ public class AdminActivity extends AppCompatActivity {
 
                                         //todo: takes the group name and puts it in the club/interest/social table and removes it from the NewGroups table.
                                         @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                                "http://192.168.42.43/project/AcceptGroup.php", params) {
+                                                "http://192.168.110.1/project/AcceptGroup.php", params) {
                                             @Override
                                             protected void onPostExecute(String output) {
                                             }
@@ -108,7 +108,7 @@ public class AdminActivity extends AppCompatActivity {
 
                                         //todo: takes the group name and removes it from the NewGroups table.
                                         @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                                "http://192.168.42.43/project/RejectGroup.php", params) {
+                                                "http://192.168.110.1/project/RejectGroup.php", params) {
                                             @Override
                                             protected void onPostExecute(String output) {
                                             }

@@ -88,7 +88,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params){
-            String reg_url = "http://192.168.42.43/project/register.php";
+            String reg_url = "http://192.168.110.1/project/register.php";
             String method = params[0];
 
             if(method.equals("Register")){

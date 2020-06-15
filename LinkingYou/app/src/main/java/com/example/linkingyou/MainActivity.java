@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params){
-            String login_url = "http://192.168.42.43/project/auth1.php";
+            String login_url = "http://192.168.110.1/project/auth1.php";
             String method = params[0];
 
            if(method.equals("Login")){

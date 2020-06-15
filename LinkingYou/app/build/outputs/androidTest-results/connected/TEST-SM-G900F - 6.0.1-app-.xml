@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.android.build.gradle.internal.testing.ConnectedDevice" tests="1" failures="1" errors="0" skipped="0" time="14.565" timestamp="2020-06-15T08:17:44" hostname="localhost">
+  <properties>
+    <property name="device" value="SM-G900F - 6.0.1" />
+    <property name="flavor" value="" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="runTests" classname="com.android.build.gradle.internal.testing.ConnectedDevice" time="0.001">
+    <failure>com.android.builder.testing.api.DeviceException: com.android.ddmlib.InstallException: INSTALL_FAILED_UPDATE_INCOMPATIBLE
+	at com.android.build.gradle.internal.testing.ConnectedDevice.installPackage(ConnectedDevice.java:132)
+	at com.android.build.gradle.internal.testing.SimpleTestRunnable.run(SimpleTestRunnable.java:134)
+	at com.android.ide.common.workers.ExecutorServiceAdapter$submit$submission$1.run(ExecutorServiceAdapter.kt:68)
+	at java.util.concurrent.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1386)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+Caused by: com.android.ddmlib.InstallException: INSTALL_FAILED_UPDATE_INCOMPATIBLE
+	at com.android.ddmlib.Device.installRemotePackage(Device.java:1168)
+	at com.android.ddmlib.Device.installPackage(Device.java:998)
+	at com.android.ddmlib.Device.installPackage(Device.java:974)
+	at com.android.ddmlib.Device.installPackage(Device.java:963)
+	at com.android.build.gradle.internal.testing.ConnectedDevice.installPackage(ConnectedDevice.java:126)
+	... 7 more
+</failure>
+  </testcase>
+</testsuite>

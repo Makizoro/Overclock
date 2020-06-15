@@ -60,7 +60,7 @@ public class SocialFrag extends Fragment {
 
         //todo: takes empty string and returns SocialG names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://192.168.42.43/project/Social.php",params) {
+                "http://192.168.110.1/project/Social.php",params) {
             @Override
             protected void onPostExecute(String output) {
                     LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
@@ -90,7 +90,7 @@ public class SocialFrag extends Fragment {
 
                                     //TODO: Gets all SocialG descriptions.
                                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                            "http://192.168.42.43/project/getdesc.php", params) {
+                                            "http://192.168.110.1/project/getdesc.php", params) {
                                         @Override
                                         protected void onPostExecute(String output) {
                                             LinearLayout l = (LinearLayout) root.findViewById(R.id.list);

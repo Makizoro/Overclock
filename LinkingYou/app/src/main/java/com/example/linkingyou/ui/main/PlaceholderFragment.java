@@ -84,46 +84,46 @@ public class PlaceholderFragment extends Fragment {
         final TextView textView = root.findViewById(R.id.section_label);
         final String Club_id = "";
         ContentValues params = new ContentValues();
-        params.put("Club_id",Club_id);
+        params.put("Club_id", Club_id);
 
         //todo: takes empty string and returns Club names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://192.168.42.43/project/clubs.php",params) {
+                "http://192.168.110.1/project/clubs.php", params) {
             @Override
             protected void onPostExecute(String output) {
-                    LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
-                    l.removeAllViews();
-                    Log.d("output", output);
-                    try {
-                        JSONArray ja = new JSONArray(output);
-                        for (int i = 0; i < ja.length(); i++) {
-                            JSONObject jo = (JSONObject) ja.get(i);
-                            LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
+                LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
+                l.removeAllViews();
+                Log.d("output", output);
+                try {
+                    JSONArray ja = new JSONArray(output);
+                    for (int i = 0; i < ja.length(); i++) {
+                        JSONObject jo = (JSONObject) ja.get(i);
+                        LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
 
 
-                            // TODO: Set field to CLUB_NAME so I can call that field.
-                            TextView assigntxt = (TextView) item.findViewById(R.id.textview1);
-                            assigntxt.setText(jo.getString("CLUB_NAME"));
-                            final String id = jo.getString("CLUB_NAME");
+                        // TODO: Set field to CLUB_NAME so I can call that field.
+                        TextView assigntxt = (TextView) item.findViewById(R.id.textview1);
+                        assigntxt.setText(jo.getString("CLUB_NAME"));
+                        final String id = jo.getString("CLUB_NAME");
 
-                            l.addView(item);
-                            item.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
-                                    final TextView marked = (TextView)item.findViewById(R.id.textview1);
-                                    String Club_ID = marked.getText().toString();
-                                    
-                                    //Stuff Sayan added.
-                                    //Intent Prof = new Intent(this, ProfActivity.class);
-                                    //Prof.putExtra("Club_ID", Club_ID);
-                                    //startActivity(Prof);
-                                    /*ContentValues params = new ContentValues();
+                        l.addView(item);
+                        item.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
+                                final TextView marked = (TextView) item.findViewById(R.id.textview1);
+                                String Club_ID = marked.getText().toString();
+
+                                //Stuff Sayan added.
+                                //Intent Prof = new Intent(this, ProfActivity.class);
+                                //Prof.putExtra("Club_ID", Club_ID);
+                                //startActivity(Prof);
+                                    ContentValues params = new ContentValues();
                                     params.put("Club_ID", Club_ID);
 
                                     //TODO: Gets all Club descriptions.
                                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                            "http://192.168.42.43/project/tab.php", params) {
+                                            "http://192.168.110.1/project/tab.php", params) {
                                         @Override
                                         protected void onPostExecute(String output) {
                                             LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
@@ -148,13 +148,13 @@ public class PlaceholderFragment extends Fragment {
                                             }
                                         }
                                     };
-                                    AsyncHttpPost.execute();*/
-                                }
-                            });
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                                    AsyncHttpPost.execute();
+                            }
+                        });
                     }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         };
         asYncHttpPost.execute();
@@ -162,90 +162,4 @@ public class PlaceholderFragment extends Fragment {
 
         return root;
     }
-
-    class BackgroundTask extends AsyncTask<String,Void,String> {
-
-        AlertDialog alertDialog;
-        Context ctx;
-
-        BackgroundTask(Context ctx){
-            this.ctx = ctx;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            alertDialog = new AlertDialog.Builder(ctx).create();
-            alertDialog.setTitle("Login information...");
-        }
-
-        @Override
-        protected String doInBackground(String... params){
-            String login_url = "http://192.168.42.43/project/auth1.php";
-            String method = params[0];
-
-            if(method.equals("Login")){
-                String login_name = params[1];
-                String password = params[2];
-                try {
-                    URL url = new URL(login_url);
-                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                    httpURLConnection.setRequestMethod("POST");
-                    httpURLConnection.setDoOutput(true);
-
-                    OutputStream OS = httpURLConnection.getOutputStream();
-                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS,"UTF-8"));
-                    String data = URLEncoder.encode("user_name", "UTF-8") + "=" + URLEncoder.encode(login_name, "UTF-8") + "&" +
-                            URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
-                    bufferedWriter.write(data);
-                    bufferedWriter.flush();
-                    bufferedWriter.close();
-                    OS.close();
-
-                    InputStream inputStream = httpURLConnection.getInputStream();
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
-                    String response = "";
-                    String line = "";
-                    while ((line = bufferedReader.readLine()) != null){
-                        response += line;
-                    }
-                    bufferedReader.close();
-                    inputStream.close();
-                    httpURLConnection.disconnect();
-
-                    return response;
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(Void... values) {
-            super.onProgressUpdate(values);
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            String check = result;
-            Log.d("output", check);
-            if (result.equals("Login Succesful")) {
-               // Intent TabsIntent = new Intent(MainActivity.this, TabActivity.class);
-                //TabsIntent.putExtra("userS",username);
-                Toast.makeText(ctx, check, Toast.LENGTH_SHORT).show();
-                //startActivity(TabsIntent);
-            } else if(result.equals("Login Succesful..Admin")){
-               // Intent AmdIntent = new Intent(PlaceholderFragment.this, AdminActivity.class);
-                Toast.makeText(ctx, check, Toast.LENGTH_SHORT).show();
-                //startActivity(AmdIntent);
-
-            }else{
-                Toast.makeText(ctx, "Failed to login... incorrect username or password", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
-
 }
