@@ -91,7 +91,6 @@ public class InterestFrag extends Fragment {
 
         @Override
         protected String doInBackground(String... params) {
-            //String reg_url = "http://192.168.42.43/project/register.php";
             String interest_url = "http://192.168.42.43/project/getInterest.php";
             String method = params[0];
 

@@ -85,7 +85,7 @@ public class AdminActivity extends AppCompatActivity {
 
                                         //todo: takes the group name and puts it in the club/interest/social table and removes it from the NewGroups table.
                                         @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                                "http://lamp.ms.wits.ac.za/~s1746074/AcceptGroup.php", params) {
+                                                "http://192.168.42.43/project/AcceptGroup.php", params) {
                                             @Override
                                             protected void onPostExecute(String output) {
                                             }
@@ -108,14 +108,13 @@ public class AdminActivity extends AppCompatActivity {
 
                                         //todo: takes the group name and removes it from the NewGroups table.
                                         @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                                "http://lamp.ms.wits.ac.za/~s1746074/RejectGroup.php", params) {
+                                                "http://192.168.42.43/project/RejectGroup.php", params) {
                                             @Override
                                             protected void onPostExecute(String output) {
                                             }
                                         };
                                         AsyncHttpPost.execute();
                                         Intent TabsIntent = new Intent(AdminActivity.this, AdminActivity.class);
-                                        //TabsIntent.putExtra("userS",username);
                                         startActivity(TabsIntent);
                                     }
                                 });

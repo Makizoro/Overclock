@@ -51,46 +51,6 @@ public class RegisterActivity extends AppCompatActivity {
         mPassCon = (EditText) findViewById(R.id.edPassConReg);
         mBack = (Button) findViewById(R.id.btnBack1);
         mReg = (Button) findViewById(R.id.btnReg);
-        //final CheckBox mStud = (CheckBox) findViewById(R.id.chkstud);
-        //final CheckBox mLec = (CheckBox) findViewById(R.id.chklec);
-
-        /*mReg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String UserName = mUsername.getText().toString();
-                String studentId = mEmail.getText().toString();
-                String UserPassword = mPassword.getText().toString();
-                String conpass = mPassCon.getText().toString();
-
-                    if (conpass.equals(UserPassword)) {
-                        ContentValues params = new ContentValues();
-                        params.put("username", UserName);
-                        params.put("email", studentId);
-                        params.put("password", UserPassword);
-
-                        //todo: takes username, student id and password, registers them. returns 0 or 1 (a 0 if such a student id already exists)
-                        @SuppressLint("StaticFieldLeak")AsyncHTTPPost asyncHttpPost = new AsyncHTTPPost("http://10.100.15.21/project/register.php", params) {
-                            @Override
-                            protected void onPostExecute(String output) {
-                                if (output.equals("0")) {
-                                    TextView mWrong = (TextView) findViewById(R.id.txtunmatched);
-                                    mWrong.setText("Username unavailable.");
-                                }else{
-                                    TextView mWrong = (TextView) findViewById(R.id.txtunmatched);
-                                    mWrong.setText("Registered Succesfully!");
-                                }
-                            }
-                        };
-                        asyncHttpPost.execute();
-                    }
-                        else {
-                        TextView mWrong = (TextView) findViewById(R.id.txtunmatched);
-                        mWrong.setText("Passwords do not match.");
-                    }
-
-            }
-        });*/
-
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,8 +67,6 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         String method = "Register";
-        //BackIntent.Connect connect = new BackIntent.Connect(this);
-        //connect.execute(method,B_username, B_password, B_email);
         BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.execute(method,B_username,B_password,B_email);
     }
@@ -131,7 +89,6 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params){
             String reg_url = "http://192.168.42.43/project/register.php";
-            //String login_url = "http://192.168.42.43/project/auth1.php";
             String method = params[0];
 
             if(method.equals("Register")){
@@ -189,8 +146,6 @@ public class RegisterActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             String check = result;
             Toast.makeText(ctx, result, Toast.LENGTH_SHORT).show();
-            //Intent TabsIntent = new Intent(RegisterActivity.this, TabActivity.class);
-            //startActivity(TabsIntent);
             Log.d("onPostExecute: ", result);
             if (check.equals("Registration successful..")) {
                 Toast.makeText(ctx, check, Toast.LENGTH_SHORT).show();

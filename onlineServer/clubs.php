@@ -7,7 +7,7 @@ $conn = mysqli_connect("localhost:3308", "root", "", $db);
 if($conn)
 {
 	
-	$q = "SELECT CSI_name FROM CSI ";
+	$q = "SELECT CSI_name FROM CSI WHERE CSI_type = 'club'";
 	
 	$result = mysqli_query($conn, $q);
 	
@@ -18,10 +18,7 @@ if($conn)
 	}
 	
 	echo json_encode(array($response));
-	//echo $response;
-	echo $response[0][0];
-	echo "\n".$response[1][0];
-	echo "\n".$response[2][0];
+	//echo $respons
 }
 mysqli_close($conn);
 ?>
