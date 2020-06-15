@@ -41,7 +41,7 @@ public class MainActivityTest {
     // To test the login
     @Test
     public void processLogin(){
-        onView(withId(R.id.editText)).perform(typeText("123456"));
+        onView(withId(R.id.editText)).perform(typeText("Jade"));
         onView(withId(R.id.edPass)).perform(typeText("hey"));
         onView(withId(R.id.btnLog)).perform(click());
 

@@ -31,10 +31,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         switch (position){
             case 0:
                 fragment = new PlaceholderFragment();
-                break;
             case 1:
                 fragment = new SocialFrag();
-                break;
             case 2:
                 fragment = new InterestFrag();
         }

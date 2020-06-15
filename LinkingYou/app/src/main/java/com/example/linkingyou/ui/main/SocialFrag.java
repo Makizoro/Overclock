@@ -2,7 +2,6 @@ package com.example.linkingyou.ui.main;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -29,8 +28,6 @@ public class SocialFrag extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     private PageViewModel pageViewModel;
-    
-    Activity context;
 
     public static SocialFrag newInstance(int index) {
         SocialFrag fragment = new SocialFrag();
@@ -55,16 +52,21 @@ public class SocialFrag extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        context.getParentActivityIntent();
         final View root = inflater.inflate(R.layout.fragment_main, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
+        /*pageViewModel.getText().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                textView.setText(s);
+            }
+        });*/
         final String Social_id = "";
         ContentValues params = new ContentValues();
         params.put("Social_id",Social_id);
 
         //todo: takes empty string and returns SocialG names.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://192.168.110.1/project/Social.php",params) {
+                "http://lamp.ms.wits.ac.za/~s1746074/Social.php",params) {
             @Override
             protected void onPostExecute(String output) {
                     LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
@@ -89,18 +91,12 @@ public class SocialFrag extends Fragment {
                                     LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
                                     final TextView marked = (TextView)item.findViewById(R.id.textview1);
                                     String Social_ID = marked.getText().toString();
-                                    
-                                    //Stuff Sayan added.
-                                Intent Prof = new Intent(context, ProfActivity.class);
-                                Prof.putExtra("Social_ID", Social_ID);
-                                startActivity(Prof);
-
-                                    /*ContentValues params = new ContentValues();
+                                    ContentValues params = new ContentValues();
                                     params.put("Social_ID", Social_ID);
 
                                     //TODO: Gets all SocialG descriptions.
                                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                            "http://192.168.110.1/project/getdesc.php", params) {
+                                            "http://lamp.ms.wits.ac.za/~s1746074/getdesc.php", params) {
                                         @Override
                                         protected void onPostExecute(String output) {
                                             LinearLayout l = (LinearLayout) root.findViewById(R.id.list);
@@ -125,7 +121,7 @@ public class SocialFrag extends Fragment {
                                             }
                                         }
                                     };
-                                    AsyncHttpPost.execute();*/
+                                    AsyncHttpPost.execute();
                                 }
                             });
                         }

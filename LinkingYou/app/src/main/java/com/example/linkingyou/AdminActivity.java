@@ -29,9 +29,9 @@ public class AdminActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_activity);
         ButtonAcc = (Button) findViewById(R.id.btnAccept);
-        //ButtonAcc.setVisibility(View.INVISIBLE);
+        ButtonAcc.setVisibility(View.INVISIBLE);
         ButtonRej = (Button) findViewById(R.id.btnReject);
-       // ButtonRej.setVisibility(View.INVISIBLE);
+        ButtonRej.setVisibility(View.INVISIBLE);
         processGroups();
 
     }
@@ -50,10 +50,11 @@ public class AdminActivity extends AppCompatActivity {
 
         //todo: gets all new groups with their description as one object.
         @SuppressLint("StaticFieldLeak") AsyncHTTPPost asYncHttpPost = new AsyncHTTPPost(
-                "http://192.168.110.1/project/reg.php",params) {
+                "http://0.100.15.21/project/getNewGroups.php",params) {
             @Override
             protected void onPostExecute(String output) {
                 LinearLayout l = (LinearLayout) findViewById(R.id.list);
+                l.removeAllViews();
                 Log.d("output", output);
                 try {
                     JSONArray ja = new JSONArray(output);
@@ -85,7 +86,7 @@ public class AdminActivity extends AppCompatActivity {
 
                                         //todo: takes the group name and puts it in the club/interest/social table and removes it from the NewGroups table.
                                         @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                                "http://192.168.110.1/project/AcceptGroup.php", params) {
+                                                "http://127.0.0.1/onlineServer/AcceptGroup.php", params) {
                                             @Override
                                             protected void onPostExecute(String output) {
                                             }
@@ -108,13 +109,14 @@ public class AdminActivity extends AppCompatActivity {
 
                                         //todo: takes the group name and removes it from the NewGroups table.
                                         @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                                                "http://192.168.110.1/project/RejectGroup.php", params) {
+                                                "http://127.0.0.1/onlineServer/RejectGroup.php", params) {
                                             @Override
                                             protected void onPostExecute(String output) {
                                             }
                                         };
                                         AsyncHttpPost.execute();
                                         Intent TabsIntent = new Intent(AdminActivity.this, AdminActivity.class);
+                                        //TabsIntent.putExtra("userS",username);
                                         startActivity(TabsIntent);
                                     }
                                 });

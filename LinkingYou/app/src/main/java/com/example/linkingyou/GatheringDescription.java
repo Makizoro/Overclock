@@ -49,7 +49,7 @@ public class GatheringDescription extends AppCompatActivity {
 
                     //todo: takes in name, desc, and creates a potential club, needs to be approved by admin.
                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                            "http://192.168.110.1/project/createClub.php", params) {
+                            "http://127.0.0.1/onlineServer/createClub.php", params) {
                         @Override
                         protected void onPostExecute(String output) {
                             Snackbar.make(v, "Sent to Administrator for Approval!", Snackbar.LENGTH_LONG)
@@ -65,7 +65,7 @@ public class GatheringDescription extends AppCompatActivity {
 
                     //todo: takes in name, desc, and creates a potential SocialG, needs to be approved by admin.
                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                            "http://192.168.110.1/project/createSocial.php", params) {
+                            "http://127.0.0.1/onlineServer/createSocial.php", params) {
                         @Override
                         protected void onPostExecute(String output) {
                             Snackbar.make(v, "Sent to Administrator for Approval!", Snackbar.LENGTH_LONG)
@@ -81,7 +81,7 @@ public class GatheringDescription extends AppCompatActivity {
 
                     //todo: takes in name, desc, and creates a potential InterestG, needs to be approved by admin.
                     @SuppressLint("StaticFieldLeak") AsyncHTTPPost AsyncHttpPost = new AsyncHTTPPost(
-                            "http://192.168.110.1/project/createInterest.php", params) {
+                            "http://127.0.0.1/onlineServer/createInterest.php", params) {
                         @Override
                         protected void onPostExecute(String output) {
                             Snackbar.make(v, "Sent to Administrator for Approval!", Snackbar.LENGTH_LONG)
