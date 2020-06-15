@@ -119,7 +119,7 @@ public class PlaceholderFragment extends Fragment {
                                 String Club_ID = marked.getText().toString();
 
                                 //Stuff Sayan added.
-                                Intent Prof = new Intent(this, ProfActivity.class);
+                                Intent Prof = new Intent(context, ProfActivity.class);
                                 Prof.putExtra("Club_ID", Club_ID);
                                 startActivity(Prof);
                                     /*ContentValues params = new ContentValues();
