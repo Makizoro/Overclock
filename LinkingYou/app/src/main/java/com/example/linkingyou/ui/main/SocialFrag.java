@@ -2,6 +2,7 @@ package com.example.linkingyou.ui.main;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,6 +29,8 @@ public class SocialFrag extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     private PageViewModel pageViewModel;
+    
+    Activity context;
 
     public static SocialFrag newInstance(int index) {
         SocialFrag fragment = new SocialFrag();
@@ -52,6 +55,7 @@ public class SocialFrag extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+        context.getParentActivityIntent();
         final View root = inflater.inflate(R.layout.fragment_main, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
         final String Social_id = "";
@@ -85,7 +89,13 @@ public class SocialFrag extends Fragment {
                                     LinearLayout item = (LinearLayout) getLayoutInflater().inflate(R.layout.list_item, null);
                                     final TextView marked = (TextView)item.findViewById(R.id.textview1);
                                     String Social_ID = marked.getText().toString();
-                                    ContentValues params = new ContentValues();
+                                    
+                                    //Stuff Sayan added.
+                                Intent Prof = new Intent(context, ProfActivity.class);
+                                Prof.putExtra("Social_ID", Social_ID);
+                                startActivity(Prof);
+
+                                    /*ContentValues params = new ContentValues();
                                     params.put("Social_ID", Social_ID);
 
                                     //TODO: Gets all SocialG descriptions.
@@ -115,7 +125,7 @@ public class SocialFrag extends Fragment {
                                             }
                                         }
                                     };
-                                    AsyncHttpPost.execute();
+                                    AsyncHttpPost.execute();*/
                                 }
                             });
                         }
