@@ -1,8 +1,8 @@
 
+# Overclock CSI Social Platform:
+
 [![Build Status](https://travis-ci.org/Makizoro/Overclock.svg?branch=master)](https://travis-ci.org/Makizoro/Overclock)
 [![codecov](https://codecov.io/github/Makizoro/Overclock/branch/master/graph/badge.svg)](https://codecov.io/gh/Makizoro/Overclock)
-
-Overclock CSI Social Platform:
 
 This app is designed to provide a concise platform to display Wit's different social branches; namely clubs, societies and interest groups (CSIs). We believe that there is an opportunity to provide a dedicated platform to host CSI that will provide easy and quick access to information about these CSI and allow users to explore different CSI that they perhaps didn't know existed. This promotes more interactivity across Wits.
 
