@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testing">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".AddEvent"></activity>
+        <activity android:name=".Events" />
+        <activity android:name=".AddToCSIForum" />
+        <activity android:name=".CSIForum" />
+        <activity android:name=".AddToForum" />
+        <activity android:name=".Forum" />
+        <activity android:name=".LoadUserRequest" />
+        <activity android:name=".Homepage" />
+        <activity
+            android:name=".TabCSILoad"
+            android:label="@string/title_activity_tab_c_s_i_load"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".ProfilePageCSI" />
+        <activity android:name=".CSIRequest" />
+        <activity android:name=".Username" />
+        <activity android:name=".User" />
+        <activity android:name=".ProfileUpdate" />
+        <activity android:name=".Profile" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
