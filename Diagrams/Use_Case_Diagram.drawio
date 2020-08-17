@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-08-17T10:17:13.412Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="3QoxMBN0xvcr2BF47BGo" version="13.5.5" type="github">
+<mxfile host="www.draw.io" modified="2020-08-17T10:20:02.438Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="pLP7Ik4PpDVvHNI7_2Sa" version="13.5.5" type="github">
   <diagram id="K0m3Yvn-BNH7TDLMjK33" name="Page-1">
     <mxGraphModel dx="1831" dy="1599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -275,8 +275,8 @@
         <mxCell id="0f6o6foIR92L9gPPkOPn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;endArrow=openThin;endFill=0;" parent="1" source="0f6o6foIR92L9gPPkOPn-6" target="szR2yDTY2ZWLf-qTvKoL-12" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="180" y="460" />
-              <mxPoint x="180" y="254" />
+              <mxPoint x="280" y="460" />
+              <mxPoint x="280" y="254" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -292,8 +292,8 @@
         <mxCell id="0f6o6foIR92L9gPPkOPn-6" value="View Forum" style="ellipse;whiteSpace=wrap;html=1;fillColor=#66B2FF;" parent="1" vertex="1">
           <mxGeometry x="390" y="430" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0f6o6foIR92L9gPPkOPn-10" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;rotation=0;" parent="1" vertex="1">
-          <mxGeometry x="215" y="250" width="40" height="20" as="geometry" />
+        <mxCell id="0f6o6foIR92L9gPPkOPn-10" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;rotation=-90;" parent="1" vertex="1">
+          <mxGeometry x="270" y="400" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="0f6o6foIR92L9gPPkOPn-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;endArrow=openThin;endFill=0;targetPerimeterSpacing=0;" parent="1" source="0f6o6foIR92L9gPPkOPn-13" target="0f6o6foIR92L9gPPkOPn-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -327,6 +327,19 @@
         </mxCell>
         <mxCell id="Ts6eUtOUtTMw5XWi3v1j-5" value="&amp;lt;&amp;lt;Includes&amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;rotation=0;" vertex="1" parent="1">
           <mxGeometry x="410" y="550" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Ts6eUtOUtTMw5XWi3v1j-6" value="View CSI profile" style="ellipse;whiteSpace=wrap;html=1;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="190" y="290" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ts6eUtOUtTMw5XWi3v1j-7" value="" style="endArrow=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;rounded=0;" edge="1" parent="1" target="Ts6eUtOUtTMw5XWi3v1j-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="230" as="sourcePoint" />
+            <mxPoint x="270" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="190" y="260" />
+              <mxPoint x="225" y="260" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
