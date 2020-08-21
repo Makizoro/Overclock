@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2"
+    android:background="@drawable/homepage"
     android:orientation="horizontal"
     android:gravity="center"
     tools:context=".MainActivity">
@@ -80,7 +80,7 @@
                     android:layout_width="137dp"
                     android:layout_height="51dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/forum" />
+                    app:srcCompat="@drawable/forum2" />
 
 
                 <Button
