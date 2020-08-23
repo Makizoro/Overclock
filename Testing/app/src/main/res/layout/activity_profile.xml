@@ -23,7 +23,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="352dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:orientation="vertical">
 
@@ -43,23 +43,22 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="118dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtUserType"
                     android:layout_width="184dp"
-                    android:layout_height="52dp"
-
-                    android:layout_gravity="center_horizontal"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/input_field"
-                    android:textColor="#1E1D63"
-                    android:textColorHint="#6A6A6A" />
+                    android:padding="10dp"
+                    android:textColor="#6A6A6A" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="118dp"
                 android:orientation="vertical">
 
                 <Button
@@ -71,6 +70,7 @@
                     android:background="@drawable/btn_rounded"
                     android:backgroundTint="#FFD700"
                     android:text="Update"
+                    android:shadowRadius="@integer/google_play_services_version"
                     android:textColor="#6A6A6A" />
 
             </LinearLayout>

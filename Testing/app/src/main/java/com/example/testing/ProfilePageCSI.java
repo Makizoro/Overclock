@@ -41,6 +41,7 @@ public class ProfilePageCSI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page_c_s_i);
+        getWindow().getAttributes().windowAnimations = R.style.slide;
 
         txtName = findViewById(R.id.txtName);
         txtType = findViewById(R.id.txtType);

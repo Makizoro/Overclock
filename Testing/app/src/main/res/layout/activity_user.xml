@@ -41,6 +41,7 @@
                     android:background="@drawable/btn_rounded"
                     android:backgroundTint="#FFD700"
                     android:text="Profile"
+                    android:shadowRadius="@integer/google_play_services_version"
                     android:textColor="#6A6A6A" />
 
             </LinearLayout>
@@ -66,6 +67,7 @@
                     android:background="@drawable/btn_rounded"
                     android:backgroundTint="#FFD700"
                     android:textColor="#6A6A6A"
+                    android:shadowRadius="@integer/google_play_services_version"
                     android:text="CSI"/>
 
             </LinearLayout>
@@ -91,6 +93,7 @@
                     android:background="@drawable/btn_rounded"
                     android:backgroundTint="#FFD700"
                     android:text="Forum"
+                    android:shadowRadius="@integer/google_play_services_version"
                     android:textColor="#6A6A6A" />
 
             </LinearLayout>
@@ -115,6 +118,7 @@
                     android:background="@drawable/btn_rounded"
                     android:backgroundTint="#FFD700"
                     android:text="Events"
+                    android:shadowRadius="@integer/google_play_services_version"
                     android:textColor="#6A6A6A" />
             </LinearLayout>
 

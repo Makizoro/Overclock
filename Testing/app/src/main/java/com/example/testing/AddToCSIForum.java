@@ -34,6 +34,7 @@ public class AddToCSIForum extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_to_forum);
+        getWindow().getAttributes().windowAnimations = R.style.slide;
 
         edtTopic = findViewById(R.id.edtTopic);
         edtMessage = findViewById(R.id.edtMessage);

@@ -25,6 +25,7 @@ public class User extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
+        getWindow().getAttributes().windowAnimations = R.style.slide;
 
         profile = findViewById(R.id.btnProfile);
         csi = findViewById(R.id.btnCSI);

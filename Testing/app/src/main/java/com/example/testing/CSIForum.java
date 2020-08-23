@@ -27,6 +27,7 @@ public class CSIForum extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_c_s_i_forum);
+        getWindow().getAttributes().windowAnimations = R.style.slide;
 
         fab = findViewById(R.id.fabAddCSIForumMessage);
 

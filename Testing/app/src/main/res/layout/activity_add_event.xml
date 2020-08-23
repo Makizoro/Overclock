@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="214dp"
         android:orientation="vertical"></LinearLayout>
 
     <LinearLayout
@@ -40,7 +40,7 @@
                     android:ems="10"
                     android:hint="Enter CSI name"
                     android:inputType="textPersonName"
-                    android:textColor="#1E1D63"
+                    android:textColor="#6A6A6A"
                     android:textColorHint="#6A6A6A" />
             </LinearLayout>
 
@@ -58,7 +58,7 @@
                     android:ems="10"
                     android:hint="Enter event name"
                     android:inputType="textPersonName"
-                    android:textColor="#1E1D63"
+                    android:textColor="#6A6A6A"
                     android:textColorHint="#6A6A6A" />
             </LinearLayout>
 
@@ -76,7 +76,7 @@
                     android:ems="10"
                     android:hint="Enter event date"
                     android:inputType="textPersonName"
-                    android:textColor="#1E1D63"
+                    android:textColor="#6A6A6A"
                     android:textColorHint="#6A6A6A" />
             </LinearLayout>
 
@@ -94,7 +94,7 @@
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:hint="Enter event venue"
-                    android:textColor="#1E1D63"
+                    android:textColor="#6A6A6A"
                     android:textColorHint="#6A6A6A" />
             </LinearLayout>
 
@@ -112,6 +112,7 @@
                     android:background="@drawable/btn_rounded"
                     android:backgroundTint="#FFD700"
                     android:text="Save"
+                    android:shadowRadius="@integer/google_play_services_version"
                     android:textColor="#6A6A6A" />
 
             </LinearLayout>

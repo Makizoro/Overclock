@@ -40,7 +40,7 @@
                     android:ems="10"
                     android:hint="Name"
                     android:inputType="textPersonName"
-                    android:textColor="#1E1D63"
+                    android:textColor="#6A6A6A"
                     android:textColorHint="#6A6A6A" />
 
             </LinearLayout>
@@ -59,7 +59,7 @@
                     android:ems="10"
                     android:hint="Description"
                     android:inputType="textPersonName"
-                    android:textColor="#1E1D63"
+                    android:textColor="#6A6A6A"
                     android:textColorHint="#6A6A6A" />
             </LinearLayout>
 
@@ -77,7 +77,7 @@
                     android:ems="10"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
-                    android:textColor="#1E1D63"
+                    android:textColor="#6A6A6A"
                     android:textColorHint="#6A6A6A" />
 
             </LinearLayout>
@@ -132,6 +132,7 @@
                 android:background="@drawable/btn_rounded"
                 android:backgroundTint="#FFD700"
                 android:text="Request"
+                android:shadowRadius="@integer/google_play_services_version"
                 android:textColor="#6A6A6A" />
 
         </LinearLayout>

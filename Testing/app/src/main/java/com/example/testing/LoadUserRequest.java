@@ -32,6 +32,7 @@ public class LoadUserRequest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load_user_request);
+        getWindow().getAttributes().windowAnimations = R.style.slide;
 
         setRecyclerView();
     }
