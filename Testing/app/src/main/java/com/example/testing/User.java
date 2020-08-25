@@ -61,7 +61,7 @@ public class User extends AppCompatActivity {
         event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(User.this,LoadUserRequest.class);
+                Intent i = new Intent(User.this,Events.class);
                 startActivity(i);
             }
         });
