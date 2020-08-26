@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardBackgroundColor="#CBCBCB"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtNotifyCSI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="CSI"
+            android:textColor="#6A6A6A"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:id="@+id/txtNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#42B8F7"
+            android:layout_below="@+id/txtNotifyCSI"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="Notification"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

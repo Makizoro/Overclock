@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navProfileU"
+            android:icon="@drawable/ic_baseline_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/navCSIU"
+            android:icon="@drawable/ic_baseline_csi"
+            android:title="CSI" />
+        <item
+            android:id="@+id/navEventU"
+            android:icon="@drawable/ic_baseline_event"
+            android:title="Events" />
+        <item
+            android:id="@+id/navForumU"
+            android:icon="@drawable/ic_baseline_forum"
+            android:title="Forum" />
+        <item
+            android:id="@+id/navNotificationU"
+            android:icon="@drawable/ic_baseline_notification"
+            android:title="Notification" />
+
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/navSignOutU"
+                android:icon="@drawable/ic_baseline_sign_out"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+</menu>

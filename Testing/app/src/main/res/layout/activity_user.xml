@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homepage"
+    android:orientation="horizontal"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="268dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="137dp"
+                    android:layout_height="51dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/userpic" />
+
+                <Button
+                    android:id="@+id/btnProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/btn_rounded"
+                    android:backgroundTint="#FFD700"
+                    android:shadowRadius="@integer/google_play_services_version"
+                    android:text="Profile"
+                    android:textColor="#6A6A6A" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="137dp"
+                    android:layout_height="51dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/csipic" />
+
+                <Button
+                    android:id="@+id/btnCSI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/btn_rounded"
+                    android:backgroundTint="#FFD700"
+                    android:shadowRadius="@integer/google_play_services_version"
+                    android:text="CSI"
+                    android:textColor="#6A6A6A" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="137dp"
+                    android:layout_height="51dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/forum2" />
+
+
+                <Button
+                    android:id="@+id/btnForum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/btn_rounded"
+                    android:backgroundTint="#FFD700"
+                    android:shadowRadius="@integer/google_play_services_version"
+                    android:text="Forum"
+                    android:textColor="#6A6A6A" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="137dp"
+                    android:layout_height="51dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/event" />
+
+                <Button
+                    android:id="@+id/btnEvents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/btn_rounded"
+                    android:backgroundTint="#FFD700"
+                    android:shadowRadius="@integer/google_play_services_version"
+                    android:text="Events"
+                    android:textColor="#6A6A6A" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnNotify"
+                    android:layout_width="wrap_content"
+                    android:shadowRadius="@integer/google_play_services_version"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_rounded"
+                    android:backgroundTint="#FFD700"
+                    android:text="Notification"
+                    android:layout_margin="10dp"
+                    android:textColor="#6A6A6A" />
+
+                <Button
+                    android:id="@+id/btnRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_rounded"
+                    android:backgroundTint="#FFD700"
+                    android:textColor="#6A6A6A"
+                    android:layout_margin="10dp"
+                    android:text="Request"/>
+            </LinearLayout>
+
+            >
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

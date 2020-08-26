@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item
+            android:id="@+id/navProfile"
+            android:icon="@drawable/ic_baseline_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/navCSI"
+            android:icon="@drawable/ic_baseline_csi"
+            android:title="CSI" />
+        <item
+            android:id="@+id/navEvent"
+            android:icon="@drawable/ic_baseline_event"
+            android:title="Events" />
+        <item
+            android:id="@+id/navForum"
+            android:icon="@drawable/ic_baseline_forum"
+            android:title="Forum" />
+        <item
+            android:id="@+id/navNotification"
+            android:icon="@drawable/ic_baseline_notification"
+            android:title="Notification" />
+        <item
+            android:id="@+id/navRequest"
+            android:icon="@drawable/ic_baseline_requests"
+            android:title="Requests" />
+
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/navSignOut"
+                android:icon="@drawable/ic_baseline_sign_out"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+
+</menu>
