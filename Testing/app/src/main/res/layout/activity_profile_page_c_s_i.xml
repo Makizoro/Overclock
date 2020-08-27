@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background3"
+    android:background="@drawable/profileupdate"
     android:orientation="horizontal"
     android:gravity="center_horizontal"
     tools:context=".ProfilePageCSI">
 
     <LinearLayout
         android:layout_width="343dp"
-        android:layout_height="wrap_content"
+        android:layout_height="356dp"
         android:layout_gravity="center"
         android:orientation="vertical">
 
@@ -94,8 +94,8 @@
                 android:layout_gravity="center"
                 android:background="@drawable/btn_rounded"
                 android:backgroundTint="#FFD700"
-                android:text="Join"
                 android:shadowRadius="@integer/google_play_services_version"
+                android:text="Join"
                 android:textColor="#6A6A6A" />
 
             <Button
@@ -106,8 +106,8 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/btn_rounded"
                 android:backgroundTint="#FFD700"
-                android:text="Forum"
                 android:shadowRadius="@integer/google_play_services_version"
+                android:text="Forum"
                 android:textColor="#6A6A6A" />
 
         </LinearLayout>

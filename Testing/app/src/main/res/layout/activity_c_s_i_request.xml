@@ -86,15 +86,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="121dp"
+            android:layout_height="268dp"
             android:layout_gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="145dp"
                 android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <CheckBox
                     android:id="@+id/chkClub"
@@ -106,7 +106,7 @@
 
                 <CheckBox
                     android:id="@+id/chkSociety"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
@@ -131,8 +131,8 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/btn_rounded"
                 android:backgroundTint="#FFD700"
-                android:text="Request"
                 android:shadowRadius="@integer/google_play_services_version"
+                android:text="Request"
                 android:textColor="#6A6A6A" />
 
         </LinearLayout>
