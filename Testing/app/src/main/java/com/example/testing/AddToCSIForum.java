@@ -66,7 +66,9 @@ public class AddToCSIForum extends AppCompatActivity {
 
                                     forumCSIRef.add(data);
 
+                                    String type = getIntent().getStringExtra("def");
                                     Intent i = new Intent(AddToCSIForum.this, TabCSILoad.class);
+                                    i.putExtra("def",type);
                                     startActivity(i);
 
                                 }else{

@@ -1,4 +1,4 @@
-#Fri Aug 28 10:40:17 CAT 2020
+#Fri Aug 28 17:25:21 CAT 2020
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex

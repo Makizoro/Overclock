@@ -53,8 +53,10 @@ public class AddEvent extends AppCompatActivity {
 
                 eventRef.add(data);
 
+                String type = getIntent().getStringExtra("def");
                 getWindow().getAttributes().windowAnimations = R.style.slide;
                 Intent i = new Intent(AddEvent.this, Events.class);
+                i.putExtra("def",type);
                 startActivity(i);
 
             }

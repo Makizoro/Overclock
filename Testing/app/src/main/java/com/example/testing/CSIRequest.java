@@ -77,7 +77,7 @@ public class CSIRequest extends AppCompatActivity {
                                 public void onSuccess(Void aVoid) {
                                     Toast.makeText(getApplicationContext(),"CSI request sent",Toast.LENGTH_SHORT).show();
                                     String type = getIntent().getStringExtra("def");
-                                    Intent i = new Intent(CSIRequest.this, Navigation.class);
+                                    Intent i = new Intent(CSIRequest.this, TabCSILoad.class);
                                     i.putExtra("def",type);
                                     startActivity(i);
                                 }
@@ -99,7 +99,7 @@ public class CSIRequest extends AppCompatActivity {
                                 public void onSuccess(Void aVoid) {
                                     Toast.makeText(getApplicationContext(),"CSI request sent",Toast.LENGTH_SHORT).show();
                                     String type = getIntent().getStringExtra("def");
-                                    Intent iS = new Intent(CSIRequest.this, Notification.class);
+                                    Intent iS = new Intent(CSIRequest.this, TabCSILoad.class);
                                     iS.putExtra("def",type);
                                     startActivity(iS);
                                 }
@@ -119,7 +119,7 @@ public class CSIRequest extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Toast.makeText(getApplicationContext(),"CSI request sent",Toast.LENGTH_SHORT).show();
-                                    Intent iIG = new Intent(CSIRequest.this, Navigation.class);
+                                    Intent iIG = new Intent(CSIRequest.this, TabCSILoad.class);
                                     String type = getIntent().getStringExtra("def");
                                     iIG.putExtra("def",type);
                                     startActivity(iIG);

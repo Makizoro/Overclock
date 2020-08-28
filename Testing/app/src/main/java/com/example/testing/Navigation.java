@@ -30,9 +30,6 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
-        Toolbar toolbar =findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         drawer = findViewById(R.id.drawer_layout);
 
         NavigationView navigationView = findViewById(R.id.navView);
@@ -98,8 +95,10 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
                     Intent iRequest = new Intent(Navigation.this,LoadUserRequest.class);
                     iRequest.putExtra("def",typeR);
                     startActivity(iRequest);
-                }else{
-                    Toast.makeText(getApplicationContext(),"Unauthorized",Toast.LENGTH_SHORT).show();
+                }else if(typeR.equals("User")){
+                    Intent iRequest = new Intent(Navigation.this,CSIRequest.class);
+                    iRequest.putExtra("def",typeR);
+                    startActivity(iRequest);
                 }
 
                 break;

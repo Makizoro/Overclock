@@ -54,9 +54,10 @@ public class loadSocietyUserFrag extends Fragment {
             @Override
             public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
                 String documentId = documentSnapshot.getId();
-
+                String type = getActivity().getIntent().getStringExtra("def");
                 Intent i = new Intent(getActivity(), ProfilePageCSI.class);
                 i.putExtra("CSIDocumentID",documentId);
+                i.putExtra("def",type);
                 startActivity(i);
             }
         });

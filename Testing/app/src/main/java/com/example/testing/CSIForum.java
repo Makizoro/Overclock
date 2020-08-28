@@ -36,6 +36,8 @@ public class CSIForum extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(CSIForum.this,AddToCSIForum.class);
                 String csiName = getIntent().getStringExtra("CSIName");
+                String type = getIntent().getStringExtra("def");
+                i.putExtra("def",type);
                 i.putExtra("CSIName",csiName);
                 startActivity(i);
             }
@@ -66,6 +68,15 @@ public class CSIForum extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(CSIForum.this,Navigation.class);
+        String type = getIntent().getStringExtra("def");
+        i.putExtra("def",type);
+        startActivity(i);
     }
 
     @Override

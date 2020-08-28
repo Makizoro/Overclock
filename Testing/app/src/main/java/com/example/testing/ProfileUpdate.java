@@ -53,9 +53,14 @@ public class ProfileUpdate extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(),"Username updated",Toast.LENGTH_SHORT).show();
 
-                Intent i = new Intent(ProfileUpdate.this, User.class);
+                String type = getIntent().getStringExtra("def");
+                Intent i = new Intent(ProfileUpdate.this, Navigation.class);
+                i.putExtra("def",type);
                 startActivity(i);
             }
         });
+
+
     }
+
 }

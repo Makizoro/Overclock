@@ -15,7 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testing.CSI;
 import com.example.testing.CSIAdapter;
+import com.example.testing.Profile;
 import com.example.testing.ProfilePageCSI;
+import com.example.testing.ProfileUpdate;
 import com.example.testing.R;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.CollectionReference;
@@ -54,9 +56,10 @@ public class loadInterestGroupUserFrag extends Fragment {
             @Override
             public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
                 String documentId = documentSnapshot.getId();
-
+                String type = getActivity().getIntent().getStringExtra("def");
                 Intent i = new Intent(getActivity(), ProfilePageCSI.class);
                 i.putExtra("CSIDocumentID",documentId);
+                i.putExtra("def",type);
                 startActivity(i);
             }
         });

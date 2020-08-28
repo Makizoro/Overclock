@@ -6,9 +6,13 @@
 
     <color name="light_gray">#C4C4C4</color>
 
-    <color name="colorAccept">#03DAC5</color>
+    <color name="colorAccept">#70FF5A</color>
 
     <color name="colorReject">#D15349</color>
+
+    <color name="colorText">#6A6A6A</color>
+
+    <color name="colorButton">#FFD700</color>
 
 
 </resources>
