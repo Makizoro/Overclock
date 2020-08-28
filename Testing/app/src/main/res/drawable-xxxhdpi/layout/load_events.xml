@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtEventCSI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="csi"
+            android:textColor="#6A6A6A"
+            />
+
+        <TextView
+            android:id="@+id/txtEventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/txtForumUsername"
+            android:layout_alignParentStart="true"
+            android:text="Event"
+            android:textColor="#6A6A6A"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:id="@+id/txtEventDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEventName"
+            android:textColor="#6A6A6A"
+            android:text="date"/>
+        <TextView
+            android:id="@+id/txtEventVenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEventDate"
+            android:textColor="#6A6A6A"
+            android:text="venue"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

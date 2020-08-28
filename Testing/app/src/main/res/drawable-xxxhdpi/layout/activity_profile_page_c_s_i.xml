@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    tools:context=".ProfilePageCSI">
+
+    <LinearLayout
+        android:layout_width="343dp"
+        android:layout_height="537dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/csipic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="email" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="7" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnJoin"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_rounded"
+                android:backgroundTint="#FFD700"
+                android:textColor="#6A6A6A"
+                android:text="Join" />
+
+            <Button
+                android:id="@+id/btnCSIForum"
+                android:layout_gravity="center"
+                android:layout_width="137dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_rounded"
+                android:backgroundTint="#FFD700"
+                android:textColor="#6A6A6A"
+                android:text="Forum" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

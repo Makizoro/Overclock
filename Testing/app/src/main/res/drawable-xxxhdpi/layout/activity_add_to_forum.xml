@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/addcomment"
+    tools:context=".AddToForum">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="526dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtTopic"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/input_field"
+                    android:textColor="#1E1D63"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#6A6A6A"
+                    android:hint="Enter topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtMessage"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:layout_gravity="center"
+                    android:textColorHint="#6A6A6A"
+                    android:textColor="#1E1D63"
+                    android:background="@drawable/input_field"
+                    android:inputType="textLongMessage"
+                    android:hint="Enter message" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnSaveToForum"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#FFD700"
+                    android:textColor="#6A6A6A"
+                    android:background="@drawable/btn_rounded"
+                    android:text="Save" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
