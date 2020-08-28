@@ -40,32 +40,32 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\load_society_user_frag_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_homepage.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_homepage.xml"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\font_light.ttf.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\font\\light.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_homepage.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_homepage.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable\\ic_baseline_add.xml"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\nav_header.xml"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profile_page_c_s_i.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_profile_page_c_s_i.xml"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_username.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_username.xml"
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\nav_header.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_username.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_username.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_c_s_i_request.xml.flat",
@@ -140,12 +140,12 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable-hdpi\\login.png"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_event.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_add_event.xml"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_event.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_add_event.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\font_regular.ttf.flat",
@@ -192,12 +192,12 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\load_interest_group_user_frag_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_event.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable\\ic_baseline_event.xml"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_csi.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable\\ic_baseline_csi.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_event.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable\\ic_baseline_event.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_sign_out.xml.flat",
@@ -220,12 +220,12 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable-hdpi\\userpic.png"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_user.xml"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_background2.png.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable-hdpi\\background2.png"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_user.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\font_bold.ttf.flat",
@@ -324,12 +324,12 @@
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_forum.xml"
     },
     {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_load_notification.xml.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_load_notification.xml"
-    },
-    {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable_input_field.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\drawable\\input_field.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_load_notification.xml.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_load_notification.xml"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_right.xml.flat",
@@ -338,6 +338,10 @@
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profile_update.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\layout\\activity_profile_update.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\layout_load_screen.xml.flat",
@@ -350,10 +354,6 @@
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_right.xml.flat",
         "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\anim\\slide_in_right.xml"
-    },
-    {
-        "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Mkz\\Documents\\GitHub\\Overclock\\Testing\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_requests.xml.flat",
